@@ -1,5 +1,9 @@
 require("dotenv").config()
 
+flags: {
+  THE_FLAG: false
+}
+
 module.exports = {
   /* Your site config here */
   plugins: [

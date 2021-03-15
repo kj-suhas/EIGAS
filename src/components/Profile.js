@@ -7,9 +7,11 @@ import {
   faChevronCircleLeft,
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
+import Corousal from "../components/Corousal"
 
 const Profile = ({ userData }) => {
   console.log(userData)
+
   return (
     <section
       style={{
@@ -17,9 +19,8 @@ const Profile = ({ userData }) => {
         marginTop: "40px",
       }}
     >
-      <Link to="/">
-        <div className={styles.profileCard}>
-          <img
+      <div className={styles.profileCard}>
+        {/* <img
             style={{
               width: "100%",
               height: "500px",
@@ -28,78 +29,67 @@ const Profile = ({ userData }) => {
             }}
             src={userData?.data.CDN_Photo_URL[0].url}
             alt=""
-          />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: 50,
-            }}
-          >
-            <FontAwesomeIcon icon={faChevronCircleRight} size={"2x"} />
-            <h1>. . .</h1>
-            <FontAwesomeIcon icon={faChevronCircleLeft} size={"2x"} />
-          </div>
-          <h3
-            style={{
-              fontSize: "25px",
-            }}
-          >
-            {userData?.data.Quote}
-          </h3>
-          <p>{userData?.data.Website_Content}</p>
-          <p>
-            <p>
-              {userData?.data.Name} can be reached on {userData?.data.Gender};
-              his Email id is {userData?.data.Created_By.email}
-            </p>
-          </p>
+          /> */}
+        <Corousal userData={userData} />
 
-          <div
+        <h3
+          style={{
+            fontSize: "25px",
+          }}
+        >
+          {userData?.data.Quote}
+        </h3>
+        <p>{userData?.data.Website_Content}</p>
+        <p>
+          <p>
+            {userData?.data.Name} can be reached on {userData?.data.Gender}; his
+            Email id is {userData?.data.Created_By.email}
+          </p>
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          Photos:{" "}
+          <h4
             style={{
-              display: "flex",
+              marginLeft: "9px",
             }}
           >
-            Photos:{" "}
-            <h4
+            Vicky Roy{" "}
+            <FontAwesomeIcon
               style={{
-                marginLeft: "9px",
+                marginLeft: "10px",
               }}
-            >
-              Vicky Roy{" "}
-              <FontAwesomeIcon
-                style={{
-                  marginLeft: "10px",
-                }}
-                icon={faExternalLinkAlt}
-                size={"1x"}
-              />
-            </h4>
-          </div>
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
-            Video:{" "}
-            <h4
-              style={{
-                marginLeft: "9px",
-              }}
-            >
-              Freddie{" "}
-              <FontAwesomeIcon
-                style={{
-                  marginLeft: "10px",
-                }}
-                icon={faExternalLinkAlt}
-                size={"1x"}
-              />
-            </h4>
-          </div>
+              icon={faExternalLinkAlt}
+              size={"1x"}
+            />
+          </h4>
         </div>
-      </Link>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          Video:{" "}
+          <h4
+            style={{
+              marginLeft: "9px",
+            }}
+          >
+            Freddie{" "}
+            <FontAwesomeIcon
+              style={{
+                marginLeft: "10px",
+              }}
+              icon={faExternalLinkAlt}
+              size={"1x"}
+            />
+          </h4>
+        </div>
+      </div>
     </section>
   )
 }

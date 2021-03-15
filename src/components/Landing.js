@@ -77,9 +77,7 @@ const Landing = () => {
             <span></span>
           </span>
         </span>
-        <h2
-          className={styles.addHover}
-        >
+        <h2 className={styles.addHover} onClick={() => window.scrollTo(0, 50)}>
           View Stories
         </h2>
       </div>
