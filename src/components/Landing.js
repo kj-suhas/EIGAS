@@ -2,9 +2,6 @@ import React from "react"
 import * as styles from "../styles/landing.module.css"
 
 const Landing = () => {
-  const scrollHandler = () => {
-      console.log(this.window);
-  }
   return (
     <section className={styles.container}>
       <div className={styles.flex}>
@@ -82,7 +79,6 @@ const Landing = () => {
         </span>
         <h2
           className={styles.addHover}
-          onClick={() => {scrollHandler}}
         >
           View Stories
         </h2>
