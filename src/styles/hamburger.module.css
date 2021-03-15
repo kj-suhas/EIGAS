@@ -1,0 +1,71 @@
+.profileCard {
+  background-color: #fff;
+  max-width: 50%;
+  /* margin-top: 40px;
+    margin: 0 auto; */
+  margin: 20px auto;
+  padding: 16px;
+  /* border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%); */
+}
+
+.flex {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  position: relative;
+  top: 60px;
+  height: 600px;
+  padding: 82px;
+  z-index: 100;
+  justify-self: end;
+}
+
+.formControl {
+  margin: 30px 0;
+}
+.form input:focus {
+  outline: none;
+}
+
+.form input[type="text"] {
+  border: 1px solid #51566f;
+  width: 100%;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: #51566f;
+  color: #bdbfc8;
+  border: none;
+  /* border-radius: 5px; */
+  width: 100%;
+}
+
+.iconClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.closeIcon {
+  position: absolute;
+  /* top: 0; */
+  top: 25px;
+  right: 30px;
+}
+
+.socialStyle > svg > path {
+  fill: #51566f;
+}

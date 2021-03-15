@@ -1,10 +1,19 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+require("dotenv").config()
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-source-airtable",
+      options: {
+        apikey: process.env.AIRTABLE_KEY,
+        tables: [
+          {
+            baseId: "appJg8E7TjDe4jli8",
+            tableName: "Data",
+          },
+        ],
+      },
+    },
+  ],
 }

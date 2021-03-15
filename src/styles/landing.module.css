@@ -1,0 +1,157 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 100px;
+}
+
+.landingImg {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50;
+  border-radius: 50%;
+}
+
+.landingUl {
+  font-size: 39px;
+  font-weight: bolder;
+  padding-left: 14px;
+}
+
+.landingUl li {
+  position: relative;
+  font-size: 32px;
+  font-weight: bolder;
+  height: 41px;
+}
+
+.h2Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 77px;
+}
+
+.landingh2 {
+  font-size: 31px;
+  font-weight: 600;
+  margin-top: 79px;
+
+  /* display: flex;
+  align-items: center;
+  gap: 10px; */
+}
+
+.dot {
+  display: inline-block;
+  margin-bottom: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+}
+
+/* mouse */
+.scroll-down {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse {
+  width: 21px;
+  height: 37px;
+  border: 2px solid black;
+  border-radius: 2rem;
+  display: flex;
+}
+
+.mouse span {
+  width: 0.1rem;
+  height: 0.4rem;
+  background-color: black;
+  display: block;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin: auto;
+  animation: move-wheel 1s linear infinite;
+}
+
+.container {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 60px 100px 0px 100px;
+  overflow: hidden;
+  background-color: #fcd74b;
+  background-repeat: no-repeat;
+}
+
+.addHover {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.addHover:hover {
+  margin-top: 5px;
+  cursor: "pointer";
+  border-bottom: 4px solid black;
+}
+
+.landingh2 span {
+  display: inline;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 60px 34px 0px 34px;
+  }
+  .scroll-down {
+    position: fixed;
+    top: 35px;
+    right: 23px;
+  }
+  .landingImg {
+    width: 160px;
+    height: 160px;
+  }
+
+  .landingUl li {
+    font-size: 28px;
+    height: 33px;
+  }
+
+  .landingh2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .h2Div {
+    height: 155px;
+  }
+
+  .landingh2 span {
+    display: block;
+  }
+}
+
+/* Scroll animation */
+@keyframes move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
