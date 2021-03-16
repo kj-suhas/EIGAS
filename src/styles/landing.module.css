@@ -8,11 +8,9 @@
 }
 
 .landingImg {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50;
-  border-radius: 50%;
+  width: 525px;
+  height: 230px;
+  object-fit: cover;
 }
 
 .landingUl {
@@ -118,8 +116,9 @@
     right: 23px;
   }
   .landingImg {
-    width: 160px;
+    width: 100%;
     height: 160px;
+    object-fit: cover;
   }
 
   .landingUl li {

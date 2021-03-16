@@ -2,6 +2,7 @@ import React from "react"
 import * as styles from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
+import bird from "../assets/bird.png"
 
 const Header2 = ({ data }) => {
   return (
@@ -30,10 +31,21 @@ const Header2 = ({ data }) => {
             padding: 12px;
             margin: 0 6px;
             font-size: 25px; */}
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faDove}
             size={"2x"}
             style={{
+              marginRight: "20px",
+            }}
+          /> */}
+
+          <img
+            src={bird}
+            alt=""
+            style={{
+              width: "74px",
+              height: "97px",
+              objectFit: "cover",
               marginRight: "20px",
             }}
           />

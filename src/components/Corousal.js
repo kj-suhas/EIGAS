@@ -1,5 +1,6 @@
 import React from "react"
 import Carousel from "react-elastic-carousel"
+import { Link } from "gatsby"
 
 const Corousal = ({ userData }) => {
   console.log(userData)
@@ -10,7 +11,9 @@ const Corousal = ({ userData }) => {
       <Carousel>
         {photos?.map(photoUrl => (
           <div key={photoUrl.url}>
-            <img src={photoUrl.url} alt="" />
+            <Link to="/">
+              <img src={photoUrl.url} alt="" />
+            </Link>
           </div>
         ))}
       </Carousel>
