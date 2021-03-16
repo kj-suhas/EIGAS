@@ -61,10 +61,6 @@ const Home = ({ data }) => {
     setProfileData(userData)
   }
 
-  console.log(window, "window")
-
-  console.log(data)
-
   return (
     <Router>
       <Route
