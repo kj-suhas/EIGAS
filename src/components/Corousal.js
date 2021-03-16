@@ -11,9 +11,7 @@ const Corousal = ({ userData }) => {
       <Carousel>
         {photos?.map(photoUrl => (
           <div key={photoUrl.url}>
-            <Link to="/">
-              <img src={photoUrl.url} alt="" />
-            </Link>
+            <img src={photoUrl.url} alt="" />
           </div>
         ))}
       </Carousel>
