@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+// import { BrowserRouter as Router, Route } from "react-router"
 
 import { graphql } from "gatsby"
 
@@ -62,28 +62,29 @@ const Home = ({ data }) => {
   }
 
   return (
-    <Router>
-      <Route
-        path="/"
-        component={() => (
-          <Layout
-            data={data}
-            profileData={profileData}
-            setProfile={setProfile}
-          />
-        )}
-      />
-      {/* <Route
-        path="/profile"
-        component={() => (
-          <Profile
-            data={data}
-            profileData={profileData}
-            setProfile={setProfile}
-          />
-        )}
-      /> */}
-    </Router>
+    <Layout data={data} profileData={profileData} setProfile={setProfile} />
+    // <Router>
+    //   <Route
+    //     path="/"
+    //     component={() => (
+    //       <Layout
+    //         data={data}
+    //         profileData={profileData}
+    //         setProfile={setProfile}
+    //       />
+    //     )}
+    //   />
+    //   {/* <Route
+    //     path="/profile"
+    //     component={() => (
+    //       <Profile
+    //         data={data}
+    //         profileData={profileData}
+    //         setProfile={setProfile}
+    //       />
+    //     )}
+    //   /> */}
+    // </Router>
   )
 }
 

@@ -1,21 +1,23 @@
 import React from "react"
 import * as styles from "../styles/landing.module.css"
+import landing from "../assets/landing.png"
 
 const Landing = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.flex}>
-        <img
-          className={styles.landingImg}
-          src="https://images.unsplash.com/photo-1562996036-45f05af24231?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80"
-          alt=""
-        />
-        <ul className={styles.landingUl}>
-          <li>India</li>
-          <li>Inclusion</li>
-          <li>Foundation</li>
-        </ul>
+      {/* <div className={styles.flex}> */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          // height: "100px",
+          width: "100%",
+        }}
+      >
+        <img className={styles.landingImg} src={landing} alt="" />
       </div>
+      {/* </div> */}
       <div className={styles.h2Div}>
         <h2 className={styles.landingh2}>
           <span>everyone</span>{" "}

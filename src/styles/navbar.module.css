@@ -1,7 +1,7 @@
 .navbar {
   background-color: white;
   color: black;
-  height: 90px;
+  height: 130px;
   box-shadow: 0 1px 0.2;
   /* border: 1px solid; */
   box-shadow: 5px 3px 8px #9999;
@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 0px 50px;
   /* padding-top: 20px; */
+  padding: 0 50px;
 }
 
 .navFlex {

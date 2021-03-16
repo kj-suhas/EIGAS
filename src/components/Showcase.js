@@ -1,5 +1,5 @@
 import React from "react"
-import Header2 from "../components/Header2"
+// import Header2 from "../components/Header2"
 import { Link } from "gatsby"
 import * as stylesShowcase from "../styles/profile.module.css"
 import * as navContainer from "../styles/navbar.module.css"

@@ -2,15 +2,22 @@ import React from "react"
 import * as styles from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
+import bird from "../assets/bird.png"
 
 const Header = ({ userData }) => {
   console.log(userData)
   return (
     <section className={styles.navbar}>
-      <div
-        className={`${styles.navCont} ${styles.navFlex}`}
-      >
-        <FontAwesomeIcon icon={faDove} size={"3x"} color={"red"} />
+      <div className={`${styles.navCont} ${styles.navFlex}`}>
+        <div
+          style={{
+            width: "74px",
+            height: "97px",
+            objectFit: "cover",
+          }}
+        >
+          <img src={bird} alt="" />
+        </div>
 
         {/* <div className={styles.h2Div}> */}
         <h2 className={styles.headerh1}>
@@ -28,7 +35,7 @@ const Header = ({ userData }) => {
               position: "relative",
               top: "5px",
               left: "-139px",
-              fontSize: "30px",   
+              fontSize: "30px",
               fontWeight: "lighter",
             }}
           >

@@ -4,7 +4,6 @@ import "../styles/global.css"
 import Showcase from "../components/Showcase"
 import Header2 from "../components/Header2"
 import { Link } from "gatsby"
-import { BrowserRouter as Router, Route } from "react-router-dom"
 
 const Layout = ({ children, data, profileData, setProfile }) => {
   console.log(data)
@@ -15,7 +14,7 @@ const Layout = ({ children, data, profileData, setProfile }) => {
   }
 
   return (
-    <Router>
+    <>
       <div
         style={{
           backgroundColor: "#E5E5E5",
@@ -50,7 +49,7 @@ const Layout = ({ children, data, profileData, setProfile }) => {
         <div>{children}</div>
       </div>
       {/* <Showcase /> */}
-    </Router>
+    </>
   )
 }
 
