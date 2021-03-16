@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 // import Header2 from "../components/Header2"
 import { Link } from "gatsby"
 import * as stylesShowcase from "../styles/profile.module.css"
@@ -7,6 +7,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
 const Showcase = ({ data, profileData, setProfile }) => {
   console.log(data)
+  const [userId, setUserId] = useState("")
   return (
     <div className={`${stylesShowcase.showcase} `}>
       <div className={`${navContainer.navCont}`}>
@@ -17,10 +18,11 @@ const Showcase = ({ data, profileData, setProfile }) => {
                 key={user.id}
                 onClick={() => {
                   setProfile(user)
+                  setUserId(user.id)
                   console.log(profileData)
                 }}
               >
-                <Link to="/profile" state={user}>
+                <Link to={`/profile`} state={user}>
                   <div className={stylesShowcase.profilesCard}>
                     <img
                       src={user.data.CDN_Photo_URL[0].url}
