@@ -16,13 +16,13 @@ const Corousal = ({ userData }) => {
         ref={carouselRef}
 
         enableAutoPlay
-        autoPlaySpeed={1500}
+        autoPlaySpeed={5000}
         onNextEnd={({ index }) => {
           clearTimeout(resetTimeout)
           if (index + 1 === totalPages) {
              resetTimeout = setTimeout(() => {
                 carouselRef.current.goTo(0)
-            }, 1500) // same time
+            }, 5000) // same time
           }
         }}
         itemsToShow={itemsPerPage}
