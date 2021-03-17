@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
-import { SRLWrapper } from "simple-react-lightbox"
+// import { SRLWrapper } from "simple-react-lightbox"
 
 const itemsPerPage = 1
 let resetTimeout
@@ -30,13 +30,13 @@ const Corousal = ({ userData }) => {
         itemsToShow={itemsPerPage}
       >
         {photos?.map((photoUrl, key) => (
-          <SRLWrapper>
+          // <SRLWrapper>
             <div key={photoUrl.url}>
-              <a href={photoUrl.url}>
+              {/* <a href={photoUrl.url}> */}
                 <img src={photoUrl.url} alt={altText[key]} />
-              </a>
+              {/* </a> */}
             </div>
-          </SRLWrapper>
+          // </SRLWrapper>
         ))}
       </Carousel>
     </div>
