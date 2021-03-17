@@ -21,6 +21,10 @@ body {
 ul {
   list-style-type: none;
 }
+li {
+  display: flex;
+  align-items: center;
+}
 
 h1,
 h2 {
