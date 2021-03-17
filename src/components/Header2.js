@@ -3,51 +3,27 @@ import * as styles from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
 import bird from "../assets/bird.png"
+import { Link } from "gatsby"
+import HeaderHamburger from "../assets/hamburger.png"
 
 const Header2 = ({ data }) => {
   return (
     <section className={styles.navbar}>
-      <div
-        // style={{
-        //   maxWidth: "1100px",
-        //   margin: "0 auto",
-        // }}
-        className={`${styles.navCont} ${styles.navFlex}`}
-      >
+      <div className={`${styles.navCont} ${styles.navFlex}`}>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             padding: "12px",
-            // margin: "0 10px",
             fontSize: "31px",
             fontWeight: "bolder",
           }}
         >
-          {/*  display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 12px;
-            margin: 0 6px;
-            font-size: 25px; */}
-          {/* <FontAwesomeIcon
-            icon={faDove}
-            size={"2x"}
-            style={{
-              marginRight: "20px",
-            }}
-          /> */}
-
           <img
             src={bird}
-            alt=""
-            style={{
-              width: "74px",
-              height: "97px",
-              objectFit: "cover",
-              marginRight: "20px",
-            }}
+            alt="Logo of Everyone is good at something"
+            className={styles.logoContainer}
           />
           <h2 className={styles.mediah2}>
             e <div className={styles.headerDot}></div> i{" "}
@@ -61,15 +37,10 @@ const Header2 = ({ data }) => {
             <div className={styles.headerDot}></div> at{" "}
             <div className={styles.headerDot}></div> something
           </h2>
-          {/* </div> */}
         </div>
-        <ul>
+        <ul>        
           <li>
-            <FontAwesomeIcon icon={faExpand} size={"2x"} color={"red"} />
-          </li>
-
-          <li>
-            <FontAwesomeIcon icon={faExpand} size={"2x"} />
+            <img className={styles.hamburger} src={HeaderHamburger} />
           </li>
         </ul>
       </div>

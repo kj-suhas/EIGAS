@@ -13,6 +13,13 @@ const Layout = ({ children, data, profileData, setProfile }) => {
     setShow(value)
   }
 
+  let toPublish = [];
+  for ( let i = 0; i < data?.allAirtable.nodes.length ; i++) {
+    if (data.allAirtable.nodes[i].data.Status === 'ToBePublished') {
+      toPublish.push(data.allAirtable.nodes[i]);
+    }
+  }
+
   return (
     <>
       <div
@@ -20,28 +27,28 @@ const Layout = ({ children, data, profileData, setProfile }) => {
           backgroundColor: "#E5E5E5",
         }}
       >
-        <Landing data={data} />
+        <Landing data={toPublish} />
 
-        <div>
-          <Link
+        <div id="allstories">
+          {/* <Link
             to="/profiles"
-            state={data}
+            state={toPublish}
             profileData={profileData}
             setProfile={setProfile}
             handleShow={handleShow}
             show={show}
-          >
+          > */}
             <Header2 />
-          </Link>
+          {/* </Link> */}
         </div>
         <div
           style={{
             marginTop: "20px",
-            marginBottom: "40px",
+            paddingBottom: "40px",
           }}
         >
           <Showcase
-            data={data}
+            data={toPublish}
             profileData={profileData}
             setProfile={setProfile}
           />

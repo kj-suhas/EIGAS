@@ -15,6 +15,7 @@
 
 body {
   line-height: 1.6;
+  font-family: 'Verdana';
 }
 
 ul {
@@ -35,3 +36,12 @@ p {
 img {
   width: 100%;
 }
+
+.rec-arrow-right {
+ display: none !important;
+}
+
+
+.rec-arrow-left {
+  display: none !important;
+ }

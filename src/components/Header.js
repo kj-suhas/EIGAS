@@ -3,59 +3,69 @@ import * as styles from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
 import bird from "../assets/bird.png"
+import { Link } from "gatsby"
+import HeaderHamburger from "../assets/hamburger.png"
 
 const Header = ({ userData }) => {
-  console.log(userData)
+  console.log(userData);
+  let name = userData?.data.Name.toLowerCase().trim();
+  let nameDesktop = name?.split(' ');
+  let nameMobile = name?.split(' ')[0];
+
   return (
     <section className={styles.navbar}>
       <div className={`${styles.navCont} ${styles.navFlex}`}>
         <div
           style={{
-            width: "74px",
-            height: "97px",
-            objectFit: "cover",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "12px",
+            fontSize: "31px",
+            fontWeight: "bolder",
           }}
         >
-          <img src={bird} alt="" />
+          <img
+            src={bird}
+            alt="Logo of Everyone is good at something"
+            className={styles.logoContainer}
+          />
+           <h2 className={styles.mediah2}>
+            {nameMobile}
+          </h2>
+          <h2 className={styles.headerh2}>
+            {nameDesktop?.map((word, i) => (
+              <span key={i}>
+                  {" "}{word}{" "}
+                  { i !== nameDesktop.length-1 &&
+                  (<div className={styles.headerDot}></div>)
+                  }
+              </span>
+            ))}
+          </h2>
         </div>
-
-        {/* <div className={styles.h2Div}> */}
-        <h2 className={styles.headerh1}>
-          {/* everyone <div className={styles.headerDot}></div> is{" "}
-          <div className={styles.headerDot}></div> good{" "}
-          <div className={styles.headerDot}></div> at{" "}
-          <div className={styles.headerDot}></div> something */}
+        {/* <h2 className={styles.headerh1}>
           {userData?.data.Name}
-        </h2>
-        {/* </div> */}
-
+        </h2> */}
         <ul>
-          <h1
-            style={{
-              position: "relative",
-              top: "5px",
-              left: "-139px",
-              fontSize: "30px",
-              fontWeight: "lighter",
-            }}
-          >
-            {" "}
-            {}
-          </h1>
-          <h1
-            style={{
-              marginRight: "30px",
-            }}
-          >
-            <FontAwesomeIcon icon={faExpand} size={"2x"} />
-          </h1>
-          <h1>
-            <FontAwesomeIcon
-              icon={faExpand}
-              size={"2x"}
-              onClick={() => console.log("display hamMenu")}
-            />
-          </h1>
+          <li>
+            <h1
+              style={{
+                // marginRight: "30px",
+              }}
+            >
+              <Link
+                style={{
+                  // marginBottom: "20px",
+                }}
+                to="/#allstories"
+              >All</Link>
+            </h1>
+          </li>
+       
+          <li>
+          <img className={styles.hamburger} src={HeaderHamburger} />
+          </li>
         </ul>
       </div>
     </section>

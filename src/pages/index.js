@@ -61,6 +61,17 @@ const Home = ({ data }) => {
     setProfileData(userData)
   }
 
+  // data.allAirtable.nodes.forEach(( node ) => {
+  //   createPage({
+  //     path: `profile/${node.data.Name}`,
+  //     component: path.resolve(`./src/pages/profile.js`),
+  //     context: {
+  //       profileName: node.data.Name,
+  //     },
+  //   })
+  // })
+
+
   return (
     <Layout data={data} profileData={profileData} setProfile={setProfile} />
     // <Router>

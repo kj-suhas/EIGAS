@@ -1,6 +1,7 @@
 import React from "react"
 import Profile from "../components/Profile"
 import Header from "../components/Header"
+import  * as styles from "../styles/profile.module.css"
 
 const profile = ({ location }) => {
   const userData = location.state
@@ -12,29 +13,16 @@ const profile = ({ location }) => {
     >
       <Header userData={userData} />
       <div
-        style={{
-          //   marginTop: "20px",
-          marginBottom: "40px",
-        }}
+        className={styles.dataContainer}
+        // style={{
+        //   marginTop: "0px",
+        //   paddingBottom: "40px",
+        // }}
       >
         <Profile userData={userData} />
       </div>
     </div>
   )
-}
-
-{
-  /* <Header /> */
-}
-{
-  /* <div
-          style={{
-            marginTop: "20px",
-            marginBottom: "40px",
-          }}
-        >
-          <Profile />
-        </div> */
 }
 
 export default profile

@@ -15,7 +15,7 @@ const Landing = () => {
           width: "100%",
         }}
       >
-        <img className={styles.landingImg} src={landing} alt="" />
+        <img className={styles.landingImg} src={landing} alt="Logo of Everyone is good at something" />
       </div>
       {/* </div> */}
       <div className={styles.h2Div}>
@@ -35,34 +35,20 @@ const Landing = () => {
       </div>
       <div
         style={{
-          marginTop: "66px",
+          marginTop: "80px",
           fontSize: "17px",
         }}
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          officiis corporis doloribus quas laborum, magni ullam vero quos est
-          velit laboriosam recusandae fugit dignissimos eligendi, rerum delectus
-          distinctio, totam fuga eius? Laudantium dolorem qui sapiente atque
-          iusto saepe nemo repudiandae magnam doloribus aliquid excepturi fugit
-          eius at, perspiciatis similique suscipit ipsam. Natus perferendis
-          reprehenderit maxime a, id dignissimos laudantium voluptates!
+        <p style={{
+          fontSize: "16px",
+        }}>
+          For those who have habitually attended the India Inclusion Summit (IIF) in Bengaluru, its tagline "Everyone is Good at Something" is like an old familiar melody. Equally familiar is the recurring image of the Inclusion Tree on which birds of different colours perch and co-exist. While the slogan represents the aim of the IIS to amplify the unique skills of Persons with Disabilities (PWD), the I-Tree is a visual metaphor for the spirit of Inclusion. The IIS is one of the activities of the entirely volunteer-driven India Inclusion Foundation (IIF) with a vision to create an Inclusive India where no one is left behind. 
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          repellat quis nostrum est accusamus necessitatibus fuga nisi iste
-          doloremque obcaecati! Voluptas laboriosam magnam aliquid aliquam,
-          saepe enim! At, mollitia sint quae minima dicta quibusdam, aspernatur
-          beatae recusandae quo deleniti, rerum esse quod obcaecati repellat
-          ipsam ex corporis minus possimus. Commodi, in! Aut delectus
-          perferendis dolorem laborum maxime quod adipisci rem ut? Excepturi
-          voluptatem iste voluptates quasi illo maiores tenetur, laboriosam,
-          distinctio tempora magnam voluptas dolorum optio eos asperiores hic
-          nisi quisquam doloremque similique omnis fugit quis quia accusantium?
-          Fuga odio ipsa debitis ratione quisquam velit voluptate, repudiandae
-          delectus explicabo libero ea. Adipisci rerum commodi iure officiis
-          odio, itaque exercitationem ex obcaecati quibusdam rem qui. Obcaecati
-          quis, vel quia id eveniet doloremque. Eligendi qui inventore .
+        <p
+        style={{
+          fontSize: "16px",
+        }}>
+          The unsung heroes who occupy the IIS stage every year are only a tiny window into the vast landscape of unseen PWD in India. To bring them into focus, and thus to sensitise mainstream society to disability, IIF has kickstarted a running photo campaign called Everyone is Good at Something. Photographers (and occasionally, videographers) including the acclaimed Vicky Roy will capture the stories of lesser-known PWD living in challenging circumstances. They will travel to every Indian state and spotlight all 21 disabilities listed in the Rights of PWD Act. Every week we will feature a different bird -- of a different colour, creed, gender and ability -- determinedly flying forward into windblown skies. 
         </p>
       </div>
       <div
@@ -71,15 +57,20 @@ const Landing = () => {
           justifyContent: "center",
           alignItems: "center",
           gap: "20px",
-          marginTop: "70px",
+          marginTop: "60px",
+          marginBottom: "30px",
         }}
+        onClick={() => document.getElementById('allstories').scrollIntoView({
+          behavior: 'smooth'
+        })
+        }
       >
         <span className={styles.scrollDown}>
           <span className={styles.mouse}>
             <span></span>
           </span>
         </span>
-        <h2 className={styles.addHover} onClick={() => window.scrollTo(0, 50)}>
+        <h2 className={styles.addHover}>
           View Stories
         </h2>
       </div>

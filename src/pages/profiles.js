@@ -10,14 +10,7 @@ const profiles = ({ location, profileData, setProfile, show, handleShow }) => {
         backgroundColor: "#e5e5e5",
       }}
     >
-      <Link
-        style={{
-          marginBottom: "20px",
-        }}
-        to="/hamburger"
-      >
         <Header2 />
-      </Link>
       <div
         style={{
           marginTop: "46px",
