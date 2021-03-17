@@ -63,8 +63,8 @@ img {
   top: 372px !important;
   right: 460px !important; */
   background-color: white !important;
-  height: 38px !important;
-  width: 47px !important;
+  height: 40px !important;
+  width: 40px !important;
   border: 1px solid black !important;
 }
 
@@ -96,8 +96,8 @@ img {
   top: 372px !important;
   left: 460px !important; */
   background-color: white !important;
-  height: 38px !important;
-  width: 47px !important;
+  height: 40px !important;
+  width: 40px !important;
   border: 1px solid black !important;
   position: absolute !important;
   bottom: -44px !important;
@@ -109,6 +109,11 @@ img {
   background-color: white !important;
   color: black !important;
 }
+
+.record-item-wrapper img {
+  z-index: -999 !important;
+}
+
 /* .lgkspe {
   top: 388px !important;
   right: 460px !important;
@@ -126,7 +131,7 @@ img {
     display: block !important;
     left: 78px !important;
     top: 113px !important;
-  }
+  }`1
   .rec-arrow-right {
     display: block !important;
     left: -80px !important;
