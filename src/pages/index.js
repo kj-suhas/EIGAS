@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
 // import { BrowserRouter as Router, Route } from "react-router"
+import SimpleReactLightbox from "simple-react-lightbox"
 
 import { graphql } from "gatsby"
 
@@ -71,9 +72,10 @@ const Home = ({ data }) => {
   //   })
   // })
 
-
   return (
-    <Layout data={data} profileData={profileData} setProfile={setProfile} />
+    <SimpleReactLightbox>
+      <Layout data={data} profileData={profileData} setProfile={setProfile} />
+    </SimpleReactLightbox>
     // <Router>
     //   <Route
     //     path="/"

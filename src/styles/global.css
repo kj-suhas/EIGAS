@@ -15,7 +15,7 @@
 
 body {
   line-height: 1.6;
-  font-family: 'Verdana';
+  font-family: "Verdana";
 }
 
 ul {
@@ -37,11 +37,113 @@ img {
   width: 100%;
 }
 
-.rec-arrow-right {
- display: none !important;
+/* .rec-arrow-right {
+  display: none !important;
+} */
+
+/* .rec-arrow-left {
+  display: none !important;
+} */
+
+.cJeRRR {
+  background-color: #fbcb57 !important;
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
 }
 
+.guuruq:hover,
+.guuruq:focus {
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
+.rec-arrow-right {
+  position: absolute !important;
+  bottom: -45px !important;
+  right: calc(50% - 105px) !important;
+  /* position: relative !important;
+  top: 372px !important;
+  right: 460px !important;
+  background-color: white !important;
+  height: 38px !important;
+  width: 47px !important;
+  border: 1px solid black !important; */
+}
+
+/* .lgkspe {
+  border: 1px solid black !important;
+  line-height: 0.1 !important;
+  min-width: 0px !important;
+} */
+
+/* .iLquPE {
+  border: none !important;
+  line-height: 0.1 !important;
+  max-width: auto !important;
+} */
+.iLquPE {
+  line-height: 0px !important;
+  min-width: 0px !important;
+  font-size: 0px;
+}
+
+.lgksPe {
+  line-height: 0px !important;
+  min-width: 0px !important;
+  font-size: 1em !important;
+}
 
 .rec-arrow-left {
-  display: none !important;
- }
+  /* position: relative !important;
+  top: 372px !important;
+  left: 460px !important;
+  background-color: white !important;
+  height: 38px !important;
+  width: 47px !important;
+  border: 1px solid black !important; */
+  position: absolute !important;
+  bottom: -44px !important;
+  left: calc(50% - 110px) !important;
+}
+
+.lgksPe:hover:enabled,
+.lgksPe:focus:enabled {
+  background-color: white !important;
+  color: black !important;
+}
+/* .lgkspe {
+  top: 388px !important;
+  right: 460px !important;
+} */
+
+/* .record-arrow-right */
+
+.galrjd {
+  height: 529.875px !important;
+  position: relative !important;
+}
+
+@media (max-width: 500px) {
+  .rec-arrow-left {
+    display: block !important;
+    left: 78px !important;
+    top: 113px !important;
+  }
+  .rec-arrow-right {
+    display: block !important;
+    left: -80px !important;
+    top: 113px !important;
+  }
+}
+
+/* @media (max-width: 800px) {
+  .rec-arrow-left,
+  .rec-arrow-right {
+    !important;
+  }
+}  */
+
+/* @media only screen and (max-width: 1500px) and (min-width: 501px) {
+  .rec-arrow-left,
+  .rec-arrow-right {
+    display: none !important;
+  }
+} */

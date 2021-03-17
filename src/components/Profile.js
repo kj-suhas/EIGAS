@@ -8,10 +8,9 @@ import {
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
 import Corousal from "../components/Corousal"
+import { SRLWrapper } from "simple-react-lightbox"
 
-const Profile = ({ userData }) => {
-  console.log(userData)
-
+const Profile = ({ userData, showFullImg }) => {
   return (
     <section
       style={{
@@ -34,37 +33,34 @@ const Profile = ({ userData }) => {
 
         <h3
           style={{
-            fontWeight:'100',
+            fontWeight: "100",
             fontSize: "25px",
-            fontFamily: 'Times New Roman',
-            marginTop: '20px'
+            fontFamily: "Times New Roman",
+            marginTop: "20px",
           }}
         >
           {userData?.data.Quote}
         </h3>
         <p
-        style={{
-          fontSize: "15px",
-          fontFamily: 'Verdana',
-          marginTop: '10px',
-          fontWeight:'normal',
-          letterSpacing: '0.6px'
-          
-        }}
+          style={{
+            fontSize: "15px",
+            fontFamily: "Verdana",
+            marginTop: "10px",
+            fontWeight: "normal",
+            letterSpacing: "0.6px",
+          }}
         >
-          {
-          userData?.data.Website_Content.split('\n').map((line, i) => (
+          {userData?.data.Website_Content.split("\n").map((line, i) => (
             <span key={i}>
-                {line}
-                <br/>
+              {line}
+              <br />
             </span>
-        ))
-          
-          }</p>
+          ))}
+        </p>
         <p>
           <p>
-            {userData?.data.Name} can be reached on 99999 99999; his
-            email id is {userData?.data.Created_By.email}
+            {userData?.data.Name} can be reached on 99999 99999; his email id is{" "}
+            {userData?.data.Created_By.email}
           </p>
         </p>
 

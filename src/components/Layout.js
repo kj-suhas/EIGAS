@@ -13,10 +13,10 @@ const Layout = ({ children, data, profileData, setProfile }) => {
     setShow(value)
   }
 
-  let toPublish = [];
-  for ( let i = 0; i < data?.allAirtable.nodes.length ; i++) {
-    if (data.allAirtable.nodes[i].data.Status === 'ToBePublished') {
-      toPublish.push(data.allAirtable.nodes[i]);
+  let toPublish = []
+  for (let i = 0; i < data?.allAirtable.nodes.length; i++) {
+    if (data.allAirtable.nodes[i].data.Status === "ToBePublished") {
+      toPublish.push(data.allAirtable.nodes[i])
     }
   }
 
@@ -38,22 +38,22 @@ const Layout = ({ children, data, profileData, setProfile }) => {
             handleShow={handleShow}
             show={show}
           > */}
-            <Header2 />
+          <Header2 />
           {/* </Link> */}
+          <div
+            style={{
+              marginTop: "20px",
+              paddingBottom: "40px",
+            }}
+          >
+            <Showcase
+              data={toPublish}
+              profileData={profileData}
+              setProfile={setProfile}
+            />
+          </div>
+          <div>{children}</div>
         </div>
-        <div
-          style={{
-            marginTop: "20px",
-            paddingBottom: "40px",
-          }}
-        >
-          <Showcase
-            data={toPublish}
-            profileData={profileData}
-            setProfile={setProfile}
-          />
-        </div>
-        <div>{children}</div>
       </div>
       {/* <Showcase /> */}
     </>

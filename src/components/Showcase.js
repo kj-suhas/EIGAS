@@ -6,25 +6,22 @@ import * as navContainer from "../styles/navbar.module.css"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
 const Showcase = ({ data, profileData, setProfile }) => {
-  const [userId, setUserId] = useState("")
   return (
     <div className={`${stylesShowcase.showcase} `}>
       <div className={`${navContainer.navCont}`}>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}>
           <Masonry gutter="10px">
             {data?.map(user => {
-              
-              if (user.data.Status === 'ToBePublished'){
-                let pathURL = user.data.Name.toLowerCase().trim();
-                pathURL= pathURL.replace(/\s/g, '-');
+              if (user.data.Status === "ToBePublished") {
+                let pathURL = user.data.Name.toLowerCase().trim()
+                pathURL = pathURL.replace(/\s/g, "-")
                 // console.log("PROFILE URL ---", pathURL);
-                return(
+                return (
                   <div
-                    key={user.id}
+                    key={user.data.Name}
                     onClick={() => {
                       setProfile(user)
-                      setUserId(user.id)
-                      console.log(profileData)
+                      console.log(user.data)
                     }}
                   >
                     <Link to={`/profile/${pathURL}`} state={user}>
@@ -49,8 +46,11 @@ const Showcase = ({ data, profileData, setProfile }) => {
                         >
                           <span
                             style={{
-                              fontSize: "18px",
+                              fontFamily: "Verdana, Regular",
+                              fontSize: "20px",
                               fontWeight: "lighter",
+                              width: "256px",
+                              height: "24px",
                             }}
                           >
                             {user.data.Name}
@@ -59,17 +59,18 @@ const Showcase = ({ data, profileData, setProfile }) => {
                         <h3
                           style={{
                             fontSize: "25px",
-                            fontFamily: 'Times New Roman',
-                            fontWeight: 'lighter'
+                            fontFamily: "Times New Roman",
+                            fontWeight: "lighter",
                           }}
                         >
                           {user.data.Quote}
                         </h3>
                         <p
-                         style={{
-                          fontSize: "14px",
-                          fontFamily: 'Verdana',
-                        }}>
+                          style={{
+                            fontSize: "14px",
+                            fontFamily: "Verdana",
+                          }}
+                        >
                           {user.data.Website_Content
                             ? `${user.data.Website_Content.slice(0, 500)}...`
                             : ``}
@@ -77,12 +78,11 @@ const Showcase = ({ data, profileData, setProfile }) => {
                       </div>
                     </Link>
                   </div>
-                );
+                )
               } else {
-                return null;
+                return null
               }
-            }
-            )}
+            })}
           </Masonry>
         </ResponsiveMasonry>
       </div>

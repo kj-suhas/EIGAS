@@ -1,7 +1,9 @@
 .navbar {
+  position: sticky;
+  top: 0;
   background-color: white;
   color: black;
-  height: 100px;
+  /* height: 100px; */
   box-shadow: 0 1px 0.2;
   /* border: 1px solid; */
   box-shadow: 5px 3px 8px #9999;
@@ -70,7 +72,6 @@ li {
 .headerh2 {
   display: block;
   font-size: 32px;
-
 }
 
 .headerBird {
@@ -83,13 +84,13 @@ li {
 }
 
 .logoContainer {
-    width: 50px;
-    height: auto;
-    object-fit: cover;
-    margin-right: 20px;
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
 }
-.hamburger{
-  width: 80%
+.hamburger {
+  width: 80%;
 }
 /* Mobile */
 @media (max-width: 500px) {
@@ -101,6 +102,7 @@ li {
     display: none;
   }
   .navCont {
+    width: 100%;
     padding: 0 0px;
   }
   .headerDot {
@@ -117,7 +119,7 @@ li {
     object-fit: cover;
     margin-right: 20px;
   }
-  .hamburger{
-    width: 80%
+  .hamburger {
+    width: 80%;
   }
 }
