@@ -7,10 +7,10 @@ import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
 
 const Header = ({ userData }) => {
-  console.log(userData);
-  let name = userData?.data.Name.toLowerCase().trim();
-  let nameDesktop = name?.split(' ');
-  let nameMobile = name?.split(' ')[0];
+  console.log(userData)
+  let name = userData?.data.Name.toLowerCase().trim()
+  let nameDesktop = name?.split(" ")
+  let nameMobile = name?.split(" ")[0]
 
   return (
     <section className={styles.navbar}>
@@ -25,21 +25,23 @@ const Header = ({ userData }) => {
             fontWeight: "bolder",
           }}
         >
-          <img
-            src={bird}
-            alt="Logo of Everyone is good at something"
-            className={styles.logoContainer}
-          />
-           <h2 className={styles.mediah2}>
-            {nameMobile}
-          </h2>
+          <Link to="/">
+            <img
+              src={bird}
+              alt="Logo of Everyone is good at something"
+              className={styles.logoContainer}
+            />
+          </Link>
+
+          <h2 className={styles.mediah2}>{nameMobile}</h2>
           <h2 className={styles.headerh2}>
             {nameDesktop?.map((word, i) => (
               <span key={i}>
-                  {" "}{word}{" "}
-                  { i !== nameDesktop.length-1 &&
-                  (<div className={styles.headerDot}></div>)
-                  }
+                {" "}
+                {word}{" "}
+                {i !== nameDesktop.length - 1 && (
+                  <div className={styles.headerDot}></div>
+                )}
               </span>
             ))}
           </h2>
@@ -50,21 +52,27 @@ const Header = ({ userData }) => {
         <ul>
           <li>
             <h1
-              style={{
-                // marginRight: "30px",
-              }}
+              style={
+                {
+                  // marginRight: "30px",
+                }
+              }
             >
               <Link
-                style={{
-                  // marginBottom: "20px",
-                }}
+                style={
+                  {
+                    // marginBottom: "20px",
+                  }
+                }
                 to="/#allstories"
-              >All</Link>
+              >
+                All
+              </Link>
             </h1>
           </li>
-       
+
           <li>
-          <img className={styles.hamburger} src={HeaderHamburger} />
+            <img className={styles.hamburger} src={HeaderHamburger} />
           </li>
         </ul>
       </div>
