@@ -49,13 +49,15 @@ img {
   display: none !important;
 } */
 
-.cJeRRR {
+.rec-dot_active {
   background-color: #fbcb57 !important;
   box-shadow: 0 0 1px 3px #fbcb57 !important;
 }
 
-.guuruq:hover,
-.guuruq:focus {
+.rec-dot {
+  box-shadow: 0 0 1px 3px #00000048 !important;
+}
+.rec-dot:hover{
   box-shadow: 0 0 1px 3px #fbcb57 !important;
 }
 
@@ -83,17 +85,17 @@ img {
   line-height: 0.1 !important;
   max-width: auto !important;
 } */
-.iLquPE {
-  line-height: 0px !important;
-  min-width: 0px !important;
-  font-size: 0px;
-}
-
-.lgksPe {
+.rec-arrow {
   line-height: 0px !important;
   min-width: 0px !important;
   font-size: 1em !important;
 }
+
+/* .lgksPe {
+  line-height: 0px !important;
+  min-width: 0px !important;
+  font-size: 1em !important;
+} */
 
 .rec-arrow-left {
   /* position: relative !important;
@@ -108,8 +110,8 @@ img {
   left: calc(50% - 110px) !important;
 }
 
-.lgksPe:hover:enabled,
-.lgksPe:focus:enabled {
+.rec-arrow:hover:enabled,
+.rec-arrow:focus:enabled {
   background-color: white !important;
   color: black !important;
 }
@@ -125,7 +127,7 @@ img {
 
 /* .record-arrow-right */
 
-.galrjd {
+.rec-carousel {
   /* height: 529.875px !important; */
   position: relative !important;
 }
