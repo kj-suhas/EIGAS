@@ -54,9 +54,44 @@ img {
   box-shadow: 0 0 1px 3px #fbcb57 !important;
 }
 
+.kzPUbE {
+  background-color: #fbcb57 !important;
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
 .guuruq:hover,
 .guuruq:focus {
   box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
+.rec-dot {
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
+.rec-pagination button {
+  /* background-color: #fbcb57 !important; */
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
+.XwuLX:hover,
+.XwuLX:focus {
+  box-shadow: 0 0 1px 3px #fbcb57 !important;
+}
+
+.rec-pagination .rec-dot-active {
+  box-sizing: border-box !important;
+  padding: 0px !important;
+  transition: all 250ms ease 0s !important;
+  border: none !important;
+  margin: 5px !important;
+  background-color: #fbcb57 !important;
+  font-size: 1.3em !important;
+  content: "";
+  height: 10px !important;
+  width: 10px !important;
+  /* box-shadow: rgb(103 58 183) 0px 0px 1px 3px; */
+  border-radius: 50% !important;
+  outline: none !important;
 }
 
 .rec-arrow-right {
@@ -128,6 +163,25 @@ img {
 .galrjd {
   /* height: 529.875px !important; */
   position: relative !important;
+}
+
+.hmocIu {
+  position: relative !important;
+}
+
+.rec-carousel {
+  position: relative i !important;
+}
+
+.jAmbxV {
+  line-height: 0px !important;
+  min-width: 0px !important;
+  font-size: 1em !important;
+}
+
+.jAmbxV:hover:enabled,
+.jAmbxV:focus:enabled {
+  color: black !important;
 }
 
 /* @media (max-width: 500px) {

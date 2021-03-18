@@ -76,13 +76,15 @@ const Profile = ({ userData, showFullImg }) => {
             }}
           >
             Vicky Roy{" "}
-            <FontAwesomeIcon
-              style={{
-                marginLeft: "10px",
-              }}
-              icon={faExternalLinkAlt}
-              size={"1x"}
-            />
+            <Link to="https://www.vickyroy.in">
+              <FontAwesomeIcon
+                style={{
+                  marginLeft: "10px",
+                }}
+                icon={faExternalLinkAlt}
+                size={"1x"}
+              />
+            </Link>
           </h4>
         </div>
         <div
@@ -96,14 +98,16 @@ const Profile = ({ userData, showFullImg }) => {
               marginLeft: "9px",
             }}
           >
-            Freddie{" "}
-            <FontAwesomeIcon
-              style={{
-                marginLeft: "10px",
-              }}
-              icon={faExternalLinkAlt}
-              size={"1x"}
-            />
+            Chandan Gomes{" "}
+            <Link to="http://www.chandangomes.com">
+              <FontAwesomeIcon
+                style={{
+                  marginLeft: "10px",
+                }}
+                icon={faExternalLinkAlt}
+                size={"1x"}
+              />
+            </Link>
           </h4>
         </div>
       </div>
