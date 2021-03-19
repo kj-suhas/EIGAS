@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import * as styles from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
@@ -6,8 +6,9 @@ import bird from "../assets/bird.png"
 import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
 
-const Header = ({ userData }) => {
+const Header = ({ userData, showHeaderModal, showModal, setModalData }) => {
   console.log(userData)
+  console.log(setModalData)
   let name = userData?.data.Name.toLowerCase().trim()
   let nameDesktop = name?.split(" ")
   let nameMobile = name?.split(" ")[0]
@@ -72,7 +73,9 @@ const Header = ({ userData }) => {
           </li>
 
           <li>
-            <img className={styles.hamburger} src={HeaderHamburger} />
+            <Link to="/hamburger">
+              <img className={styles.hamburger} src={HeaderHamburger} />
+            </Link>
           </li>
         </ul>
       </div>

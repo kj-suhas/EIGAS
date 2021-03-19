@@ -89,81 +89,79 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-        graphql(`
-          query MyQuery {
-            allAirtable(filter: { table: {} }) {
-              nodes {
-                table
-                data {
-                  Name
-                  Alt_Photos
-                  Alt_Text_Photo1
-                  Alt_Text_Photo2
-                  Alt_Text_Photo3
-                  Alt_Text_Photo4
-                  Alt_Text_Photo5
-                  Alt_Text_Video
-                  CDN_Photo_URL {
-                    url
-                  }
-                  Changed_By {
-                    email
-                    id
-                    name
-                  }
-                  Changed_On
-                  Created_By {
-                    email
-                    id
-                    name
-                  }
-                  Created_On
-                  Disability
-                  Gender
-                  ID
-                  Instagram_Content
-                  Language
-                  Photos {
-                    filename
-                    url
-                  }
-                  Quote
-                  State
-                  Status
-                  Video
-                  Website_Content
-                }
-                recordId
+    graphql(`
+      query MyQuery {
+        allAirtable(filter: { table: {} }) {
+          nodes {
+            table
+            data {
+              Name
+              Alt_Photos
+              Alt_Text_Photo1
+              Alt_Text_Photo2
+              Alt_Text_Photo3
+              Alt_Text_Photo4
+              Alt_Text_Photo5
+              Alt_Text_Video
+              CDN_Photo_URL {
+                url
               }
+              Changed_By {
+                email
+                id
+                name
+              }
+              Changed_On
+              Created_By {
+                email
+                id
+                name
+              }
+              Created_On
+              Disability
+              Gender
+              ID
+              Instagram_Content
+              Language
+              Photos {
+                filename
+                url
+              }
+              Quote
+              State
+              Status
+              Video
+              Website_Content
             }
+            recordId
           }
-        `).then(result => {
-          console.log(result)
-          result.data.allAirtable.nodes.forEach(( node ) => {
-            if (node.data.Status==='ToBePublished') {
-              console.log("DATAAAAA -- ", node.data);
-              let pathURL = node.data.Name.toLowerCase().trim();
-              pathURL = pathURL.replace(/\s/g, '-');
-              createPage({
-              path: `profile/${pathURL}`,
-              component: path.resolve(`src/pages/profile.js`),
-                // context: {
-                //   profileName: node.data.name,
-                // },
-              })
-            }
+        }
+      }
+    `).then(result => {
+      console.log(result)
+      result.data.allAirtable.nodes.forEach(node => {
+        if (node.data.Status === "ToBePublished") {
+          console.log("DATAAAAA -- ", node.data)
+          let pathURL = node.data.Name.toLowerCase().trim()
+          pathURL = pathURL.replace(/\s/g, "-")
+          createPage({
+            path: `profile/${pathURL}`,
+            component: path.resolve(`src/pages/profile.js`),
+            // context: {
+            //   profileName: node.data.name,
+            // },
           })
-          resolve()
-        })
-      }).catch(error => {
-        console.log(error)
-        reject()
+        }
       })
-
-
+      resolve()
+    })
+  }).catch(error => {
+    console.log(error)
+    reject()
+  })
 
   // const result = await graphql(`
   //   query {

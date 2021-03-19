@@ -95,3 +95,7 @@ img {
 .rec-carousel {
   position: relative !important;
 }
+
+.lb-closeContainer {
+  display: none;
+}

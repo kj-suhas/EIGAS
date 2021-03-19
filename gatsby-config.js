@@ -1,11 +1,10 @@
 require("dotenv").config()
 
-flags: {
-  THE_FLAG: false
-}
-
 module.exports = {
   /* Your site config here */
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     {
       resolve: "gatsby-source-airtable",

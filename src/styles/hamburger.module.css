@@ -62,6 +62,7 @@
 .closeIcon {
   position: absolute;
   /* top: 0; */
+  cursor: pointer;
   top: 25px;
   right: 30px;
 }

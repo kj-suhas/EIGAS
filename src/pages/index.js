@@ -2,7 +2,10 @@ import React, { useState } from "react"
 import Layout from "../components/Layout"
 // import { BrowserRouter as Router, Route } from "react-router"
 // import SimpleReactLightbox from "simple-react-lightbox"
-
+// import "lightbox2"
+import "lightbox2/dist/css/lightbox.css"
+import "jquery"
+import "lightbox2/dist/js/lightbox.js"
 import { graphql } from "gatsby"
 
 export const query = graphql`
@@ -74,7 +77,7 @@ const Home = ({ data }) => {
 
   return (
     // <SimpleReactLightbox>
-      <Layout data={data} profileData={profileData} setProfile={setProfile} />
+    <Layout data={data} profileData={profileData} setProfile={setProfile} />
     // </SimpleReactLightbox>
   )
 }

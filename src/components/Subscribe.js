@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/Header"
+import Header2 from "./Header2"
 import * as styles from "../styles/hamburger.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -8,25 +8,22 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ showModal, setModal }) => {
   return (
     <section
       style={{
-        minHeight: "100vh",
         backgroundColor: "#E5E5E5",
       }}
     >
-      <Header />
-
       <div className={`${styles.profileCard} ${styles.flex}`}>
-        <Link to="/">
-          <span className={`${styles.closeIcon} ${styles.socialStyle}`}>
-            <FontAwesomeIcon icon={faTimes} size={"2x"} />
-          </span>
-        </Link>
-
+        <span className={`${styles.closeIcon} ${styles.socialStyle}`}>
+          <FontAwesomeIcon
+            icon={faTimes}
+            size={"2x"}
+            onClick={() => setModal(!showModal)}
+          />
+        </span>
         <div className={styles.form}>
           <span className={`${styles.iconClass} ${styles.socialStyle}`}>
             <FontAwesomeIcon icon={faInstagram} size={"2x"} />

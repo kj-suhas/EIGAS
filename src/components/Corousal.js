@@ -31,11 +31,14 @@ const Corousal = ({ userData }) => {
       >
         {photos?.map((photoUrl, key) => (
           // <SRLWrapper>
-            <div key={photoUrl.url}>
-              {/* <a href={photoUrl.url}> */}
-                <img src={photoUrl.url} alt={altText[key]} />
-              {/* </a> */}
-            </div>
+          <div key={photoUrl.url}>
+            {/* <a href={photoUrl.url}> */}
+            <a href={photoUrl.url} data-lightbox="profilePic">
+              <img src={photoUrl.url} alt={altText[key]} />
+            </a>
+
+            {/* </a> */}
+          </div>
           // </SRLWrapper>
         ))}
       </Carousel>

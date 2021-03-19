@@ -6,7 +6,7 @@ import bird from "../assets/bird.png"
 import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
 
-const Header2 = ({ data }) => {
+const Header2 = ({ showModal, setModal }) => {
   return (
     <section className={styles.navbar}>
       <div className={`${styles.navCont} ${styles.navFlex}`}>
@@ -38,9 +38,13 @@ const Header2 = ({ data }) => {
             <div className={styles.headerDot}></div> something
           </h2>
         </div>
-        <ul>        
+        <ul>
           <li>
-            <img className={styles.hamburger} src={HeaderHamburger} />
+            <img
+              className={styles.hamburger}
+              src={HeaderHamburger}
+              onClick={() => setModal(!setModal)}
+            />
           </li>
         </ul>
       </div>

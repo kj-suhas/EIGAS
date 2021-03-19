@@ -3,13 +3,19 @@ import Profile from "../components/Profile"
 import Header from "../components/Header"
 import * as styles from "../styles/profile.module.css"
 
+let showSubscribe = false
+
 const profile = ({ location }) => {
   const userData = location.state
+  console.log(location)
   // const [showFullImg, setShowFullImg] = useState(false)
 
   // const showImg = value => {
   //   setShowFullImg(value)
   // }
+
+  if (!showSubscribe) {
+  }
 
   return (
     <div
