@@ -10,7 +10,9 @@ import {
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ location }) => {
+  const profileUser = location.state
+  console.log(profileUser)
   return (
     <section
       style={{

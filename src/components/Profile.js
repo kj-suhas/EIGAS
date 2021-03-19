@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import * as styles from "../styles/profile.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
@@ -10,7 +10,9 @@ import {
 import Corousal from "../components/Corousal"
 import { SRLWrapper } from "simple-react-lightbox"
 
-const Profile = ({ userData, showFullImg }) => {
+const Profile = ({ profileUser }) => {
+  // console.log(allUsers)
+  console.log(profileUser)
   return (
     <section
       style={{
@@ -29,7 +31,7 @@ const Profile = ({ userData, showFullImg }) => {
             src={userData?.data.CDN_Photo_URL[0].url}
             alt=""
           /> */}
-        <Corousal userData={userData} />
+        <Corousal userData={profileUser} />
 
         <h3
           style={{
@@ -39,7 +41,7 @@ const Profile = ({ userData, showFullImg }) => {
             marginTop: "20px",
           }}
         >
-          {userData?.data.Quote}
+          {profileUser[0]?.Quote}
         </h3>
         <p
           style={{
@@ -50,7 +52,7 @@ const Profile = ({ userData, showFullImg }) => {
             letterSpacing: "0.6px",
           }}
         >
-          {userData?.data.Website_Content.split("\n").map((line, i) => (
+          {profileUser[0]?.Website_Content.split("\n").map((line, i) => (
             <span key={i}>
               {line}
               <br />
@@ -59,8 +61,8 @@ const Profile = ({ userData, showFullImg }) => {
         </p>
         <p>
           <p>
-            {userData?.data.Name} can be reached on 99999 99999; his email id is{" "}
-            {userData?.data.Created_By.email}
+            {profileUser[0]?.Name} can be reached on 99999 99999; his email id
+            is {profileUser[0]?.email}
           </p>
         </p>
 

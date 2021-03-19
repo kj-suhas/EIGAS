@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-const HamburgerMenu = ({ showModal, setModal }) => {
+const Subscribe = ({ showModal, setModal }) => {
   return (
     <section
       style={{
@@ -71,4 +71,4 @@ const HamburgerMenu = ({ showModal, setModal }) => {
   )
 }
 
-export default HamburgerMenu
+export default Subscribe

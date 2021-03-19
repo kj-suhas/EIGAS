@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react"
 // import Header2 from "../components/Header2"
 import { Link } from "gatsby"
@@ -7,25 +8,25 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Subscribe from "./Subscribe"
 
 const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
-  // localStorage.setItem("data", JSON.stringify(data))
-  // const [allUserData, setallUserData] = useState([])
+  localStorage.setItem("data", JSON.stringify(data))
+  const [allUserData, setallUserData] = useState([])
 
-  // let newData = []
-  // useEffect(() => {
-  //   newData = localStorage.getItem("data")
-  //   newData = JSON.parse(newData)
-  //   console.log(newData)
-  //   setallUserData([...newData])
-  // }, [])
+  let newData = []
+  useEffect(() => {
+    newData = localStorage.getItem("data")
+    newData = JSON.parse(newData)
+    console.log(newData)
+    setallUserData([...newData])
+  }, [])
 
   console.log(showModal, setModal)
   const modalData = {
     showModal,
     setModal,
   }
+  console.log("All User s", allUserData)
   console.log(modalData)
   if (showModal) {
-    console.log("I'm inside")
     return (
       <div className={`${stylesShowcase.showcase} `}>
         <div className={`${navContainer.navCont}`}>
@@ -33,8 +34,8 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
           >
             <Masonry gutter="10px">
-              {data &&
-                data.map(user => {
+              {allUserData &&
+                allUserData.map(user => {
                   console.log("user", user)
                   if (user.data.Status === "ToBePublished") {
                     let pathURL = user.data.Name.toLowerCase().trim()
@@ -49,7 +50,7 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                           console.log(user.data)
                         }}
                       >
-                        <Link to={`/profile/${pathURL}`} state={user}>
+                        <Link to={`/profile/${pathURL}`}>
                           <div className={stylesShowcase.profilesCard}>
                             <img
                               src={user.data.CDN_Photo_URL[0].url}

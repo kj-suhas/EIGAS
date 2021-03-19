@@ -99,3 +99,11 @@ img {
 .lb-closeContainer {
   display: none;
 }
+
+.lb-container img {
+  border: none !important;
+}
+
+.lb-details span {
+  display: none !important;
+}

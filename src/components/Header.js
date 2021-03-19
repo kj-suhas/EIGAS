@@ -6,10 +6,10 @@ import bird from "../assets/bird.png"
 import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
 
-const Header = ({ userData, showHeaderModal, showModal, setModalData }) => {
-  console.log(userData)
+const Header = ({ profileUser, showHeaderModal, showModal, setModalData }) => {
+  console.log(profileUser)
   console.log(setModalData)
-  let name = userData?.data.Name.toLowerCase().trim()
+  let name = profileUser[0]?.data.Name.toLowerCase().trim()
   let nameDesktop = name?.split(" ")
   let nameMobile = name?.split(" ")[0]
 
@@ -73,7 +73,7 @@ const Header = ({ userData, showHeaderModal, showModal, setModalData }) => {
           </li>
 
           <li>
-            <Link to="/hamburger">
+            <Link to="/hamburger" state={profileUser}>
               <img className={styles.hamburger} src={HeaderHamburger} />
             </Link>
           </li>

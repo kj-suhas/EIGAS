@@ -8,11 +8,9 @@ let resetTimeout
 
 const Corousal = ({ userData }) => {
   const carouselRef = useRef(null)
-  const totalPages = Math.ceil(
-    userData?.data.CDN_Photo_URL.length / itemsPerPage
-  )
-  const photos = userData?.data.CDN_Photo_URL
-  const altText = userData?.data.Alt_Photos.split("~")
+  const totalPages = Math.ceil(userData[0]?.CDN_Photo_URL.length / itemsPerPage)
+  const photos = userData[0]?.CDN_Photo_URL
+  const altText = userData[0]?.Alt_Photos.split("~")
   return (
     <div>
       <Carousel
