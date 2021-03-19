@@ -3,9 +3,9 @@ import Layout from "../components/Layout"
 // import { BrowserRouter as Router, Route } from "react-router"
 // import SimpleReactLightbox from "simple-react-lightbox"
 // import "lightbox2"
-import "lightbox2/dist/css/lightbox.css"
-import "jquery"
-import "lightbox2/dist/js/lightbox.js"
+// import "lightbox2/dist/css/lightbox.css"
+// import "jquery"
+// import "lightbox2/dist/js/lightbox.js"
 import { graphql } from "gatsby"
 
 export const query = graphql`

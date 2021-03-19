@@ -8,23 +8,23 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Subscribe from "./Subscribe"
 
 const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
-  localStorage.setItem("data", JSON.stringify(data))
-  const [allUserData, setallUserData] = useState([])
+  // localStorage.setItem("data", JSON.stringify(data))
+  // const [allUserData, setallUserData] = useState([])
 
-  let newData = []
-  useEffect(() => {
-    newData = localStorage.getItem("data")
-    newData = JSON.parse(newData)
-    console.log(newData)
-    setallUserData([...newData])
-  }, [])
+  // let newData = []
+  // useEffect(() => {
+  //   newData = localStorage.getItem("data")
+  //   newData = JSON.parse(newData)
+  //   console.log(newData)
+  //   setallUserData([...newData])
+  // }, [])
 
   console.log(showModal, setModal)
   const modalData = {
     showModal,
     setModal,
   }
-  console.log("All User s", allUserData)
+  // console.log("All User s", allUserData)
   console.log(modalData)
   if (showModal) {
     return (
@@ -34,8 +34,8 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
           >
             <Masonry gutter="10px">
-              {allUserData &&
-                allUserData.map(user => {
+              {data &&
+                data.map(user => {
                   console.log("user", user)
                   if (user.data.Status === "ToBePublished") {
                     let pathURL = user.data.Name.toLowerCase().trim()

@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 // import { SRLWrapper } from "simple-react-lightbox"
 
 const itemsPerPage = 1
@@ -13,6 +14,21 @@ const Corousal = ({ userData }) => {
   const altText = userData[0]?.Alt_Photos.split("~")
   return (
     <div>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+          integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+          crossorigin="anonymous"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+          integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+          crossorigin="anonymous"
+        />
+      </Helmet>
+
       <Carousel
         ref={carouselRef}
         enableAutoPlay

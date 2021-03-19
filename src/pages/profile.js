@@ -84,7 +84,7 @@ const profile = ({ location, data }) => {
   const [showSubscribe, setShowSubscribe] = useState(false)
   console.log(showSubscribe)
 
-  const vijay = value => {
+  const handleToggleSubscribe = value => {
     setShowSubscribe(value)
   }
 
@@ -128,7 +128,7 @@ const profile = ({ location, data }) => {
       {/* <Header
           profileUser={profileUser}
           onClick={() => {
-            vijay(!showSubscribe)
+            handleToggleSubscribe(!showSubscribe)
           }}
         /> */}
 
@@ -195,7 +195,7 @@ const profile = ({ location, data }) => {
             <li>
               <img
                 className={stylesNavbar.hamburger}
-                onClick={() => vijay(!showSubscribe)}
+                onClick={() => handleToggleSubscribe(!showSubscribe)}
                 src={HeaderHamburger}
               />
             </li>
@@ -213,7 +213,7 @@ const profile = ({ location, data }) => {
               <FontAwesomeIcon
                 icon={faTimes}
                 size={"2x"}
-                onClick={() => vijay(!showSubscribe)}
+                onClick={() => handleToggleSubscribe(!showSubscribe)}
               />
             </span>
             <div className={stylesHam.form}>
