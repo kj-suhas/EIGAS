@@ -15,18 +15,22 @@ const Corousal = ({ userData }) => {
   return (
     <div>
       <Helmet>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
           integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
           crossorigin="anonymous"
         />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
           integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
           crossorigin="anonymous"
         />
+
+        {/* <link ref = 'stylesheet' src = "https://panorbit.in/cdn/lightbox.min.css" />
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+        <script src = "https://panorbit.in/cdn/lightbox-plus-jquery.min.js" />  */}
       </Helmet>
 
       <Carousel
@@ -48,7 +52,7 @@ const Corousal = ({ userData }) => {
           <div key={photoUrl.url}>
             {/* <a href={photoUrl.url}> */}
             <a href={photoUrl.url} data-lightbox="profilePic">
-              <img src={photoUrl.url} alt={altText[key]} />
+              <img class='carousel-image' src={photoUrl.url} alt={altText[key]} />
             </a>
 
             {/* </a> */}

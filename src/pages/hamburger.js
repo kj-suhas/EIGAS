@@ -20,7 +20,7 @@ const HamburgerMenu = ({ location }) => {
         backgroundColor: "#E5E5E5",
       }}
     >
-      <Header />
+      {/* <Header />
 
       <div className={`${styles.profileCard} ${styles.flex}`}>
         <Link to="/">
@@ -31,9 +31,15 @@ const HamburgerMenu = ({ location }) => {
 
         <div className={styles.form}>
           <span className={`${styles.iconClass} ${styles.socialStyle}`}>
-            <FontAwesomeIcon icon={faInstagram} size={"2x"} />
-            <FontAwesomeIcon icon={faFacebook} size={"2x"} />
-            <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+            <a title="Share on Instagram" href="https://www.instagram.com/indiainclusionsummit/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram} size={"2x"} />
+            </a>
+            <a title="Share on Facebook" href="https://www.facebook.com/IndiaInclusionSummit" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} size={"2x"} />
+            </a>
+            <a title="Tweet about this on Twitter" href="https://twitter.com/IndiaInclusion" target="_blank">
+              <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+            </a>
           </span>
 
           <form>
@@ -71,7 +77,7 @@ const HamburgerMenu = ({ location }) => {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

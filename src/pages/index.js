@@ -7,6 +7,7 @@ import Layout from "../components/Layout"
 // import "jquery"
 // import "lightbox2/dist/js/lightbox.js"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 export const query = graphql`
   query MyQuery {
@@ -77,7 +78,12 @@ const Home = ({ data }) => {
 
   return (
     // <SimpleReactLightbox>
+    <>  
+      <Helmet>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+      </Helmet>
     <Layout data={data} profileData={profileData} setProfile={setProfile} />
+    </>
     // </SimpleReactLightbox>
   )
 }
