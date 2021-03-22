@@ -1,19 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React, { useState, useEffect } from "react"
-import Profile from "../../components/Profile"
-import Header from "../../components/Header"
-import * as styles from "../../styles/profile.module.css"
-import Subscribe from "../../components/Subscribe"
-import * as stylesNavbar from "../../styles/navbar.module.css"
+import Profile from "../components/Profile"
+import Header from "../components/Header"
+import * as styles from "../styles/profile.module.css"
+import Subscribe from "../components/Subscribe"
+import * as stylesNavbar from "../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
-import bird from "../../assets/bird.png"
+import bird from "../assets/bird.png"
 import { Link } from "gatsby"
-import HeaderHamburger from "../../assets/hamburger.png"
+import HeaderHamburger from "../assets/hamburger.png"
 
 // Subscribe
-import * as stylesHam from "../../styles/hamburger.module.css"
+import * as stylesHam from "../styles/hamburger.module.css"
 import {
   faInstagram,
   faFacebook,
@@ -78,7 +78,7 @@ const profile = ({ location, data }) => {
   console.log(allUserData)
 
   console.log(location.pathname)
-  const personNameUrl = location.pathname.split("/")[3]
+  const personNameUrl = location.pathname.split("/")[2]
   console.log(personNameUrl)
   // const [allUserData, setAllUserData] = useState(data)
   const [showSubscribe, setShowSubscribe] = useState(false)
@@ -170,9 +170,7 @@ const profile = ({ location, data }) => {
           <ul>
             <li>
               <h1>
-                <Link to="/#allstories">
-                  All
-                </Link>
+                <Link to="/#allstories">All</Link>
               </h1>
             </li>
 
@@ -204,19 +202,31 @@ const profile = ({ location, data }) => {
               <span
                 className={`${stylesHam.iconClass} ${stylesHam.socialStyle}`}
               >
-                <a title="Share on Instagram" href="https://www.instagram.com/indiainclusionsummit/" target="_blank">
+                <a
+                  title="Share on Instagram"
+                  href="https://www.instagram.com/indiainclusionsummit/"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faInstagram} size={"2x"} />
                 </a>
-                <a title="Share on Facebook" href="https://www.facebook.com/IndiaInclusionSummit" target="_blank">
+                <a
+                  title="Share on Facebook"
+                  href="https://www.facebook.com/IndiaInclusionSummit"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faFacebook} size={"2x"} />
                 </a>
-                <a title="Tweet about this on Twitter" href="https://twitter.com/IndiaInclusion" target="_blank">
+                <a
+                  title="Tweet about this on Twitter"
+                  href="https://twitter.com/IndiaInclusion"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faTwitter} size={"2x"} />
                 </a>
               </span>
 
-              <div style={{ textAlign:'center' }}>
-                <span style={{ position:'relative', top:10}}>
+              <div style={{ textAlign: "center" }}>
+                <span style={{ position: "relative", top: 10 }}>
                   We will notify you whenever there is a new story
                 </span>
               </div>

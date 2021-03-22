@@ -52,7 +52,11 @@ const Corousal = ({ userData }) => {
           <div key={photoUrl.url}>
             {/* <a href={photoUrl.url}> */}
             <a href={photoUrl.url} data-lightbox="profilePic">
-              <img class='carousel-image' src={photoUrl.url} alt={altText[key]} />
+              <img
+                class="carousel-image"
+                src={photoUrl.url}
+                alt={altText[key]}
+              />
             </a>
 
             {/* </a> */}

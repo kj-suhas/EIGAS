@@ -51,7 +51,7 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                       >
                         {/* <Link to={`/profile/${pathURL}`}> */}
                         <a
-                          href={`/profile/inclusive-stories/${pathURL}`}
+                          href={`/inclusive-stories/${pathURL}`}
                           target="_blank"
                         >
                           <div className={stylesShowcase.profilesCard}>

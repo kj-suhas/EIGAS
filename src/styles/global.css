@@ -42,15 +42,15 @@ img {
 }
 
 .rec-dot_active {
-  background-color: #fbcb57 !important;
-  box-shadow: 0 0 1px 3px #fbcb57 !important;
+  background-color: black !important;
+  box-shadow: 0 0 1px 1px #fbcb57 !important;
 }
 
 .rec-dot {
-  box-shadow: 0 0 1px 3px #00000048 !important;
+  box-shadow: black 0px 0px 1px 1px !important;
 }
 .rec-dot:hover {
-  box-shadow: 0 0 1px 3px #fbcb57 !important;
+  background-color: black !important;
 }
 
 .rec-arrow-right {
