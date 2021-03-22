@@ -2,6 +2,7 @@ import React from "react"
 import * as styles from "../styles/landing.module.css"
 import landing from "../assets/landing.png"
 import { Link } from "gatsby"
+// import landing from "../assets/landing.png"
 
 const About = () => {
   return (
@@ -12,12 +13,10 @@ const About = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          // height: "100px",
-          width: "100%",
         }}
       >
         <img
-          className={styles.landingImg}
+          className={styles.aboutImg}
           src={landing}
           alt="Logo of Everyone is good at something"
         />

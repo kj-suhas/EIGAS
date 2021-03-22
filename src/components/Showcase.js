@@ -79,7 +79,7 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                               <span
                                 style={{
                                   fontFamily: "Verdana, Regular",
-                                  fontSize: "20px",
+                                  fontSize: "14px",
                                   fontWeight: "lighter",
                                   width: "256px",
                                   height: "24px",
