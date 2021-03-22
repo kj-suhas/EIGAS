@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Landing = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.landingcontainer}>
       {/* <div className={styles.flex}> */}
       <div
         style={{
@@ -46,15 +46,17 @@ const Landing = () => {
           fontSize: "16px",
           marginTop: "50px",
           // fontSize: "17px",
+          padding: "10px 30px 0px 30px"
         }}
       >
         <p
           style={{
             fontSize: "16px",
+            margin: '0px !important'
           }}
         >
           For those who have habitually attended the India Inclusion Summit
-          (IIF) in Bengaluru, its tagline "Everyone is Good at Something" is
+          (IIS) in Bengaluru, its tagline "Everyone is Good at Something" is
           like an old familiar melody. Equally familiar is the recurring image
           of the Inclusion Tree on which birds of different colours perch and...
         </p>
@@ -74,19 +76,19 @@ const Landing = () => {
           // marginTop: "60px",
           marginBottom: "30px",
         }}
-        // onClick={() => document.getElementById('allstories').scrollIntoView({
-        //   behavior: 'smooth'
-        // })
-        // }
+        onClick={() => document.getElementById('allstories').scrollIntoView({
+            behavior: 'smooth'
+          })
+        }
       >
         <span className={styles.scrollDown}>
           <span className={styles.mouse}>
             <span></span>
           </span>
         </span>
-        <Link to="/#allstories">
+        {/* <Link to="/#allstories"> */}
           <h2 className={styles.addHover}>View Stories</h2>
-        </Link>
+        {/* </Link> */}
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const About = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.aboutcontainer}>
       {/* <div className={styles.flex}> */}
       <div
         style={{
@@ -49,7 +49,7 @@ const About = () => {
           }}
         >
           For those who have habitually attended the India Inclusion Summit
-          (IIF) in Bengaluru, its tagline "Everyone is Good at Something" is
+          (IIS) in Bengaluru, its tagline "Everyone is Good at Something" is
           like an old familiar melody. Equally familiar is the recurring image
           of the Inclusion Tree on which birds of different colours perch and
           co-exist. While the slogan represents the aim of the IIS to amplify

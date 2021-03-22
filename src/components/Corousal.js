@@ -8,7 +8,7 @@ const itemsPerPage = 1
 let resetTimeout
 
 const Corousal = ({ userData }) => {
-  const carouselRef = useRef(null)
+  // const carouselRef = useRef(null)
   const totalPages = Math.ceil(userData[0]?.CDN_Photo_URL.length / itemsPerPage)
   const photos = userData[0]?.CDN_Photo_URL
   const altText = userData[0]?.Alt_Photos.split("~")
@@ -25,17 +25,17 @@ const Corousal = ({ userData }) => {
       </Helmet>
 
       <Carousel
-        ref={carouselRef}
-        enableAutoPlay
-        autoPlaySpeed={5000}
-        onNextEnd={({ index }) => {
-          clearTimeout(resetTimeout)
-          if (index + 1 === totalPages) {
-            resetTimeout = setTimeout(() => {
-              carouselRef.current.goTo(0)
-            }, 5000) // same time
-          }
-        }}
+        // ref={carouselRef}
+        // enableAutoPlay
+        // autoPlaySpeed={5000}
+        // onNextEnd={({ index }) => {
+        //   clearTimeout(resetTimeout)
+        //   if (index + 1 === totalPages) {
+        //     resetTimeout = setTimeout(() => {
+        //       carouselRef.current.goTo(0)
+        //     }, 5000) // same time
+        //   }
+        // }}
         itemsToShow={itemsPerPage}
       >
         {photos?.map((photoUrl, key) => (

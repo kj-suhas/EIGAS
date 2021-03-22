@@ -70,10 +70,11 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
 
                             <div
                               style={{
-                                padding: "3px 8px 3px 3px",
+                                padding: "3px 6px",
                                 backgroundColor: "#FBCB57",
                                 color: "black",
                                 width: "fit-content",
+                                marginTop: "10px"
                               }}
                             >
                               <span

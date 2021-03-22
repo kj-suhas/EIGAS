@@ -147,11 +147,22 @@ const profile = ({ location, data }) => {
             }}
           >
             <Link to="/">
+            <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              // padding: "12px",
+              // fontSize: "31px",
+              // fontWeight: "bolder",
+            }}
+          >
               <img
                 src={bird}
                 alt="Logo of Everyone is good at something"
                 className={stylesNavbar.logoContainer}
               />
+              </div>
             </Link>
 
             <h2 className={stylesNavbar.mediah2}>{nameMobile}</h2>

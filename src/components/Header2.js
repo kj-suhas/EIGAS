@@ -26,9 +26,7 @@ const Header2 = ({ showModal, setModal }) => {
             className={styles.logoContainer}
           />
           <h2 className={styles.mediah2}>
-            e <div className={styles.headerDot}></div> i{" "}
-            <div className={styles.headerDot}></div> g{" "}
-            <div className={styles.headerDot}></div> a{" "}
+            e <div className={styles.headerDot}></div> g{" "}
             <div className={styles.headerDot}></div> s
           </h2>
           <h2 className={styles.headerh2}>
