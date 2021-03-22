@@ -50,7 +50,8 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                           console.log(user.data)
                         }}
                       >
-                        <Link to={`/profile/${pathURL}`}>
+                        {/* <Link to={`/profile/${pathURL}`}> */}
+                        <a href={`/profile/${pathURL}`} target="_blank">
                           <div className={stylesShowcase.profilesCard}>
                             <img
                               src={user.data.CDN_Photo_URL[0].url}
@@ -105,7 +106,8 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                                 : ``}
                             </p>
                           </div>
-                        </Link>
+                        </a>
+                        {/* </Link> */}
                       </div>
                     )
                   } else {

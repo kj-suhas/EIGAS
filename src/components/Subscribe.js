@@ -26,18 +26,29 @@ const Subscribe = ({ showModal, setModal }) => {
         </span>
         <div className={styles.form}>
           <span className={`${styles.iconClass} ${styles.socialStyle}`}>
-            <FontAwesomeIcon icon={faInstagram} size={"2x"} />
-            <FontAwesomeIcon icon={faFacebook} size={"2x"} />
-            <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+            <a title="Share on Instagram" href="https://www.instagram.com/indiainclusionsummit/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram} size={"2x"} />
+            </a>
+            <a title="Share on Facebook" href="https://www.facebook.com/IndiaInclusionSummit" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} size={"2x"} />
+            </a>
+            <a title="Tweet about this on Twitter" href="https://twitter.com/IndiaInclusion" target="_blank">
+              <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+            </a>
           </span>
 
+          <div style={{ textAlign:'center' }}>
+            <span style={{ position:'relative', top:10}}>
+              We will notify you whenever there is a new story
+            </span>
+          </div>
           <form>
             <div className={styles.formControl}>
               <input type="text" name="Email" placeholder="Enter email Id" />
             </div>
             <input type="submit" value="Subscribe" className={styles.btn} />
           </form>
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -64,7 +75,7 @@ const Subscribe = ({ showModal, setModal }) => {
             >
               Hindi
             </h2>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

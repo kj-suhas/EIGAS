@@ -167,26 +167,10 @@ const profile = ({ location, data }) => {
               ))}
             </h2>
           </div>
-          {/* <h2 className={stylesNavbar.headerh1}>
-          {userData?.data.Name}
-        </h2> */}
           <ul>
             <li>
-              <h1
-                style={
-                  {
-                    // marginRight: "30px",
-                  }
-                }
-              >
-                <Link
-                  style={
-                    {
-                      // marginBottom: "20px",
-                    }
-                  }
-                  to="/#allstories"
-                >
+              <h1>
+                <Link to="/#allstories">
                   All
                 </Link>
               </h1>
@@ -220,11 +204,22 @@ const profile = ({ location, data }) => {
               <span
                 className={`${stylesHam.iconClass} ${stylesHam.socialStyle}`}
               >
-                <FontAwesomeIcon icon={faInstagram} size={"2x"} />
-                <FontAwesomeIcon icon={faFacebook} size={"2x"} />
-                <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+                <a title="Share on Instagram" href="https://www.instagram.com/indiainclusionsummit/" target="_blank">
+                  <FontAwesomeIcon icon={faInstagram} size={"2x"} />
+                </a>
+                <a title="Share on Facebook" href="https://www.facebook.com/IndiaInclusionSummit" target="_blank">
+                  <FontAwesomeIcon icon={faFacebook} size={"2x"} />
+                </a>
+                <a title="Tweet about this on Twitter" href="https://twitter.com/IndiaInclusion" target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} size={"2x"} />
+                </a>
               </span>
 
+              <div style={{ textAlign:'center' }}>
+                <span style={{ position:'relative', top:10}}>
+                  We will notify you whenever there is a new story
+                </span>
+              </div>
               <form>
                 <div className={stylesHam.formControl}>
                   <input
@@ -239,7 +234,7 @@ const profile = ({ location, data }) => {
                   className={stylesHam.btn}
                 />
               </form>
-              <div
+              {/* <div
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -266,7 +261,7 @@ const profile = ({ location, data }) => {
                 >
                   Hindi
                 </h2>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

@@ -59,12 +59,12 @@ const Profile = ({ profileUser }) => {
             </span>
           ))}
         </p>
-        <p>
+        {/* <p>
           <p>
             {profileUser[0]?.Name} can be reached on 99999 99999; his email id
             is {profileUser[0]?.email}
           </p>
-        </p>
+        </p> */}
 
         <div
           style={{
@@ -89,29 +89,31 @@ const Profile = ({ profileUser }) => {
             </Link>
           </h4>
         </div>
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          Video:{" "}
-          <h4
+        {profileUser[0]?.Video &&
+          <div
             style={{
-              marginLeft: "9px",
+              display: "flex",
             }}
           >
-            Chandangomes{" "}
-            <Link to="http://www.chandangomes.com/">
-              <FontAwesomeIcon
-                style={{
-                  marginLeft: "10px",
-                }}
-                icon={faExternalLinkAlt}
-                size={"1x"}
-              />
-            </Link>
-          </h4>
-        </div>
+            Video:{" "}
+            <h4
+              style={{
+                marginLeft: "9px",
+              }}
+            >
+              Chandan Gomes{" "}
+              <Link to="http://www.chandangomes.com/">
+                <FontAwesomeIcon
+                  style={{
+                    marginLeft: "10px",
+                  }}
+                  icon={faExternalLinkAlt}
+                  size={"1x"}
+                />
+              </Link>
+            </h4>
+          </div>
+        }
       </div>
     </section>
   )

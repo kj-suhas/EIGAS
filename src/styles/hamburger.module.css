@@ -70,3 +70,18 @@
 .socialStyle > svg > path {
   fill: #51566f;
 }
+
+
+@media (max-width: 500px) {
+  .profileCard {
+    /* background-color: #fff; */
+    max-width: 100%;
+    margin: 2px auto;
+    /* padding: 16px; */
+  }
+  .dataContainer {
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+  }
+}
