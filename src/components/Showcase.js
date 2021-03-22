@@ -40,7 +40,6 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                   if (user.data.Status === "ToBePublished") {
                     let pathURL = user.data.Name.toLowerCase().trim()
                     pathURL = pathURL.replace(/\s/g, "-")
-                    // console.log("PROFILE URL ---", pathURL);
                     return (
                       <div
                         key={user.data.Name}
@@ -50,18 +49,21 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                           console.log(user.data)
                         }}
                       >
-                        <Link to={`/profile/${pathURL}`}>
+                        <Link to={`/profile/inclusive-stories/${pathURL}`}>
                           <div className={stylesShowcase.profilesCard}>
-                            <img
-                              src={user.data.CDN_Photo_URL[0].url}
-                              alt=""
-                              style={{
-                                width: "100%",
-                                height: "auto",
-                                objectFit: "cover",
-                                backgroundPosition: "center top",
-                              }}
-                            />
+                            <div className={stylesShowcase.imgWrapper}>
+                              <img
+                                src={user.data.CDN_Photo_URL[0].url}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                  objectFit: "cover",
+                                  backgroundPosition: "center top",
+                                }}
+                              />
+                            </div>
+
                             <div
                               style={{
                                 padding: "3px 8px 3px 3px",
@@ -100,7 +102,7 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
                               {user.data.Website_Content
                                 ? `${user.data.Website_Content.slice(
                                     0,
-                                    500
+                                    255
                                   )}...`
                                 : ``}
                             </p>

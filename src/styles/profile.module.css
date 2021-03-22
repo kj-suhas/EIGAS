@@ -11,6 +11,7 @@
 }
 
 .profilesCard {
+  overflow: hidden;
   background-color: #fff;
   padding: 16px;
 }
@@ -60,6 +61,23 @@
 .dataContainer {
   margin-top: 0px;
   padding-bottom: 40px;
+}
+
+.profilesCard img {
+  transition: transform ease-in 0.3s;
+}
+
+.profilesCard img:hover {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.imgWrapper {
+  width: 100% !important;
+  height: auto !important;
+  /* transition: transform ease-in 3s; */
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* .lightboxOverlay {

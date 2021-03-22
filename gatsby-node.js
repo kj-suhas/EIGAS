@@ -148,8 +148,8 @@ exports.createPages = async ({ graphql, actions }) => {
           let pathURL = node.data.Name.toLowerCase().trim()
           pathURL = pathURL.replace(/\s/g, "-")
           createPage({
-            path: `profile/${pathURL}`,
-            component: path.resolve(`src/pages/profile.js`),
+            path: `profile/inclusive-stories/${pathURL}`,
+            component: path.resolve(`src/pages/profile/inclusive-stories.js`),
             // context: {
             //   profileName: node.data.name,
             // },

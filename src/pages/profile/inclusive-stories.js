@@ -1,19 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React, { useState, useEffect } from "react"
-import Profile from "../components/Profile"
-import Header from "../components/Header"
-import * as styles from "../styles/profile.module.css"
-import Subscribe from "../components/Subscribe"
-import * as stylesNavbar from "../styles/navbar.module.css"
+import Profile from "../../components/Profile"
+import Header from "../../components/Header"
+import * as styles from "../../styles/profile.module.css"
+import Subscribe from "../../components/Subscribe"
+import * as stylesNavbar from "../../styles/navbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
-import bird from "../assets/bird.png"
+import bird from "../../assets/bird.png"
 import { Link } from "gatsby"
-import HeaderHamburger from "../assets/hamburger.png"
+import HeaderHamburger from "../../assets/hamburger.png"
 
 // Subscribe
-import * as stylesHam from "../styles/hamburger.module.css"
+import * as stylesHam from "../../styles/hamburger.module.css"
 import {
   faInstagram,
   faFacebook,
@@ -78,7 +78,7 @@ const profile = ({ location, data }) => {
   console.log(allUserData)
 
   console.log(location.pathname)
-  const personNameUrl = location.pathname.split("/")[2]
+  const personNameUrl = location.pathname.split("/")[3]
   console.log(personNameUrl)
   // const [allUserData, setAllUserData] = useState(data)
   const [showSubscribe, setShowSubscribe] = useState(false)
