@@ -26,7 +26,8 @@
 }
 
 .profilesCard:hover h3 {
-  color: red
+  color: red;
+  text-decoration: underline;
 }
 
 .list-images {
@@ -93,33 +94,34 @@
   overflow-x: hidden;
 }
 
-/* .lightboxOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-} */
+.myMasonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
 
-/* .lgksPe {
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-size: 1.6em;
-  background-color: red;
-  color: #333;
-  box-shadow: 0 0 2px 0px #333;
-  border-radius: 50%;
-  border: none;
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  line-height: 50px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  cursor: pointer;
-  outline: none;
-} */
+.myMasonryGrid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.myMasonryGrid_column > div {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  .myMasonryGrid {
+    margin-left: -15px; /* gutter size offset */
+  }
+  .myMasonryGrid_column {
+    padding-left: 15px; /* gutter size offset */
+  }
+  .myMasonryGrid_column > div {
+    margin-bottom: 15px; /* space between items */
+  }
+}
 
 /* Mobile */
 @media (max-width: 500px) {

@@ -14,10 +14,12 @@ const Layout = ({ children, data, profileData, setProfile }) => {
 
   let toPublish = []
   for (let i = 0; i < data?.allAirtable.nodes.length; i++) {
-    if (data.allAirtable.nodes[i].data.Status === "ToBePublished") {
+    if (data.allAirtable.nodes[i].data.Status === "Published") {
       toPublish.push(data.allAirtable.nodes[i])
     }
   }
+
+  console.log(toPublish)
 
   return (
     <>

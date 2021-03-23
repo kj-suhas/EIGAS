@@ -98,10 +98,9 @@ const profile = ({ location, data }) => {
 
   const profileUser = allUserData.filter(person => {
     console.log(person.Name)
-    if (person.Status === "ToBePublished") {
+    if (person.Status === "Published") {
       let personName = person.Name.toLowerCase().trim()
       personName = personName.replace(/\s/g, "-")
-      // console.log(personName)
 
       return personNameUrl === personName
     }
@@ -111,12 +110,6 @@ const profile = ({ location, data }) => {
   let nameDesktop = name?.split(" ")
   let nameMobile = name?.split(" ")[0]
 
-  // const [showFullImg, setShowFullImg] = useState(false)
-
-  // const showImg = value => {
-  //   setShowFullImg(value)
-  // }
-
   const getProfile = () => (
     <div
       style={{
@@ -124,16 +117,6 @@ const profile = ({ location, data }) => {
         backgroundColor: "#E5E5E5",
       }}
     >
-      {/* <div role="presentation"> */}
-      {/* <Header
-          profileUser={profileUser}
-          onClick={() => {
-            handleToggleSubscribe(!showSubscribe)
-          }}
-        /> */}
-
-      {/* </div> */}
-
       <section className={stylesNavbar.navbar}>
         <div className={`${stylesNavbar.navCont} ${stylesNavbar.navFlex}`}>
           <div
@@ -147,21 +130,18 @@ const profile = ({ location, data }) => {
             }}
           >
             <Link to="/">
-            <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              // padding: "12px",
-              // fontSize: "31px",
-              // fontWeight: "bolder",
-            }}
-          >
-              <img
-                src={bird}
-                alt="Logo of Everyone is good at something"
-                className={stylesNavbar.logoContainer}
-              />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={bird}
+                  alt="Logo of Everyone is good at something"
+                  className={stylesNavbar.logoContainer}
+                />
               </div>
             </Link>
 
@@ -181,7 +161,9 @@ const profile = ({ location, data }) => {
           <ul>
             <li>
               <h1>
-                <Link to="/#allstories">All</Link>
+                <span className={stylesNavbar.allStoriesHover}>
+                  <Link to="/#allstories">All</Link>
+                </span>
               </h1>
             </li>
 
@@ -255,34 +237,6 @@ const profile = ({ location, data }) => {
                   className={stylesHam.btn}
                 />
               </form>
-              {/* <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "100%",
-                  marginTop: "182px",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#51566f",
-                    borderBottom: "2px solid black",
-                    fontWeight: "bold",
-                  }}
-                >
-                  English
-                </h2>
-                <h2
-                  style={{
-                    color: "#51566f",
-
-                    fontWeight: "bold",
-                  }}
-                >
-                  Hindi
-                </h2>
-              </div> */}
             </div>
           </div>
         </section>

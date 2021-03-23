@@ -2,7 +2,6 @@ import React, { useRef } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-// import { SRLWrapper } from "simple-react-lightbox"
 
 const itemsPerPage = 1
 let resetTimeout
@@ -15,29 +14,11 @@ const Corousal = ({ userData }) => {
   return (
     <div>
       <Helmet>
-        <link
-          rel="stylesheet"
-          href="/lightbox/lightbox.min.css"
-        />
-        <script
-          src="/lightbox/lightbox.min.js"
-          />
+        <link rel="stylesheet" href="/lightbox/lightbox.min.css" />
+        <script src="/lightbox/lightbox.min.js" />
       </Helmet>
 
-      <Carousel
-        // ref={carouselRef}
-        // enableAutoPlay
-        // autoPlaySpeed={5000}
-        // onNextEnd={({ index }) => {
-        //   clearTimeout(resetTimeout)
-        //   if (index + 1 === totalPages) {
-        //     resetTimeout = setTimeout(() => {
-        //       carouselRef.current.goTo(0)
-        //     }, 5000) // same time
-        //   }
-        // }}
-        itemsToShow={itemsPerPage}
-      >
+      <Carousel itemsToShow={itemsPerPage}>
         {photos?.map((photoUrl, key) => (
           // <SRLWrapper>
           <div key={photoUrl.url}>
@@ -55,6 +36,9 @@ const Corousal = ({ userData }) => {
           // </SRLWrapper>
         ))}
       </Carousel>
+      {/* <div>
+        <img src={Expand} alt="" />
+      </div> */}
     </div>
   )
 }

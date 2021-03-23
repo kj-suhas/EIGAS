@@ -1,127 +1,114 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react"
-// import Header2 from "../components/Header2"
 import { Link } from "gatsby"
 import * as stylesShowcase from "../styles/profile.module.css"
 import * as navContainer from "../styles/navbar.module.css"
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+import Masonry from "react-masonry-css"
 import Subscribe from "./Subscribe"
 
 const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
-  // localStorage.setItem("data", JSON.stringify(data))
-  // const [allUserData, setallUserData] = useState([])
-
-  // let newData = []
-  // useEffect(() => {
-  //   newData = localStorage.getItem("data")
-  //   newData = JSON.parse(newData)
-  //   console.log(newData)
-  //   setallUserData([...newData])
-  // }, [])
-
   console.log(showModal, setModal)
   const modalData = {
     showModal,
     setModal,
   }
-  // console.log("All User s", allUserData)
+
+  const breakpointColumnsObj = {
+    default: 2,
+    700: 1,
+  }
+
   console.log(modalData)
   if (showModal) {
     return (
       <div className={`${stylesShowcase.showcase} `}>
         <div className={`${navContainer.navCont}`}>
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className={stylesShowcase.myMasonryGrid}
+            columnClassName={stylesShowcase.myMasonryGrid_column}
           >
-            <Masonry gutter="10px">
-              {data &&
-                data.map(user => {
-                  console.log("user", user)
-                  if (user.data.Status === "ToBePublished") {
-                    let pathURL = user.data.Name.toLowerCase().trim()
-                    pathURL = pathURL.replace(/\s/g, "-")
-                    return (
-                      <div
-                        key={user.data.Name}
-                        onClick={() => {
-                          setProfile(user)
+            {data &&
+              data.map(user => {
+                console.log("user", data)
+                if (user.data.Status === "Published") {
+                  let pathURL = user.data.Name.toLowerCase().trim()
+                  pathURL = pathURL.replace(/\s/g, "-")
+                  return (
+                    <div
+                      key={user.data.Name}
+                      onClick={() => {
+                        setProfile(user)
 
-                          console.log(user.data)
-                        }}
-                      >
-                        {/* <Link to={`/profile/${pathURL}`}> */}
-                        <a
-                          href={`/inclusive-stories/${pathURL}`}
-                          target="_blank"
-                        >
-                          <div className={stylesShowcase.profilesCard}>
-                            <div className={stylesShowcase.imgWrapper}>
-                              <img
-                                src={user.data.CDN_Photo_URL[0].url}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  height: "auto",
-                                  objectFit: "cover",
-                                  backgroundPosition: "center top",
-                                }}
-                              />
-                            </div>
-
-                            <div
+                        console.log(user.data)
+                      }}
+                    >
+                      {/* <Link to={`/profile/${pathURL}`}> */}
+                      <a href={`/inclusive-stories/${pathURL}`} target="_blank">
+                        <div className={stylesShowcase.profilesCard}>
+                          <div className={stylesShowcase.imgWrapper}>
+                            <img
+                              src={user.data.CDN_Photo_URL[0].url}
+                              alt=""
                               style={{
-                                padding: "3px 6px",
-                                backgroundColor: "#FBCB57",
-                                color: "black",
-                                width: "fit-content",
-                                marginTop: "10px"
+                                width: "100%",
+                                height: "auto",
+                                objectFit: "cover",
+                                backgroundPosition: "center top",
                               }}
-                            >
-                              <span
-                                style={{
-                                  fontFamily: "Verdana, Regular",
-                                  fontSize: "14px",
-                                  fontWeight: "lighter",
-                                  width: "256px",
-                                  height: "24px",
-                                }}
-                              >
-                                {user.data.Name}
-                              </span>
-                            </div>
-                            <h3
-                              style={{
-                                fontSize: "25px",
-                                fontFamily: "Times New Roman",
-                                fontWeight: "lighter",
-                              }}
-                            >
-                              {user.data.Quote}
-                            </h3>
-                            <p
-                              style={{
-                                fontSize: "14px",
-                                fontFamily: "Verdana",
-                              }}
-                            >
-                              {user.data.Website_Content
-                                ? `${user.data.Website_Content.slice(
-                                    0,
-                                    255
-                                  )}...`
-                                : ``}
-                            </p>
+                            />
                           </div>
-                        </a>
-                        {/* </Link> */}
-                      </div>
-                    )
-                  } else {
-                    return null
-                  }
-                })}
-            </Masonry>
-          </ResponsiveMasonry>
+
+                          <div
+                            style={{
+                              padding: "3px 6px",
+                              backgroundColor: "#FBCB57",
+                              color: "black",
+                              width: "fit-content",
+                              marginTop: "10px",
+                            }}
+                          >
+                            <span
+                              style={{
+                                fontFamily: "Verdana, Regular",
+                                fontSize: "14px",
+                                fontWeight: "lighter",
+                                width: "256px",
+                                height: "24px",
+                              }}
+                            >
+                              {user.data.Name}
+                            </span>
+                          </div>
+                          <h3
+                            style={{
+                              fontSize: "25px",
+                              fontFamily: "Times New Roman",
+                              fontWeight: "lighter",
+                            }}
+                          >
+                            {user.data.Quote}
+                          </h3>
+                          <p
+                            style={{
+                              fontSize: "14px",
+                              fontFamily: "Verdana",
+                            }}
+                          >
+                            {user.data.Website_Content
+                              ? `${user.data.Website_Content.slice(0, 255)}...`
+                              : ``}
+                          </p>
+                        </div>
+                      </a>
+                      {/* </Link> */}
+                    </div>
+                  )
+                } else {
+                  return null
+                }
+              })}
+          </Masonry>
         </div>
       </div>
     )

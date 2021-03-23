@@ -94,8 +94,66 @@ li {
   cursor: pointer;
   width: 80%;
 }
+
+.allStoriesHover {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.allStoriesHover a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .headerh2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .headerh2 {
+    font-size: 22px;
+  }
+  .headerDot {
+    display: inline-block;
+    margin-bottom: 1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: black;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .headerh2 {
+    font-size: 20px;
+  }
+  .headerDot {
+    display: inline-block;
+    margin-bottom: 1px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: black;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .headerh2 {
+    font-size: 19px;
+  }
+  .headerDot {
+    display: inline-block;
+    margin-bottom: 1px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: black;
+  }
+}
+
 /* Mobile */
-@media (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .mediah2 {
     display: block;
     font-size: 20px;
