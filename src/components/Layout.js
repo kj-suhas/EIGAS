@@ -7,9 +7,15 @@ import { Link } from "gatsby"
 
 const Layout = ({ children, data, profileData, setProfile }) => {
   console.log(data)
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false)
   const setModal = value => {
     setShowModal(value)
+  }
+
+  const [open, setOpen] = useState(false)
+  const handleClick = () => {
+    setModal(false)
+    setOpen(!open)
   }
 
   let toPublish = []
@@ -44,7 +50,12 @@ const Layout = ({ children, data, profileData, setProfile }) => {
             handleShow={handleShow}
             show={show}
           > */}
-          <Header2 setModal={setModal} showModal={showModal} />
+          <Header2
+            setModal={setModal}
+            showModal={showModal}
+            open={open}
+            handleClick={handleClick}
+          />
           {/* </Link> */}
           <div
             style={{
@@ -58,6 +69,8 @@ const Layout = ({ children, data, profileData, setProfile }) => {
               setProfile={setProfile}
               showModal={showModal}
               setModal={setModal}
+              open={open}
+              handleClick={handleClick}
             />
           </div>
           <div>{children}</div>

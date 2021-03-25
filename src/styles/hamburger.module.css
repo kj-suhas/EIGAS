@@ -67,10 +67,13 @@
   right: 30px;
 }
 
-.socialStyle > svg > path {
+.socialStyle a > svg > path {
   fill: #51566f;
 }
 
+.socialStyle a {
+  color: #51566f;
+}
 
 @media (max-width: 500px) {
   .profileCard {

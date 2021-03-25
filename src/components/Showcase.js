@@ -6,7 +6,15 @@ import * as navContainer from "../styles/navbar.module.css"
 import Masonry from "react-masonry-css"
 import Subscribe from "./Subscribe"
 
-const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
+const Showcase = ({
+  data,
+  profileData,
+  open,
+  handleClick,
+  showModal,
+  setModal,
+  setProfile,
+}) => {
   console.log(showModal, setModal)
   const modalData = {
     showModal,
@@ -19,7 +27,7 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
   }
 
   console.log(modalData)
-  if (showModal) {
+  if (!showModal && !open) {
     return (
       <div className={`${stylesShowcase.showcase} `}>
         <div className={`${navContainer.navCont}`}>
@@ -112,7 +120,15 @@ const Showcase = ({ data, profileData, showModal, setModal, setProfile }) => {
         </div>
       </div>
     )
-  } else return <Subscribe showModal={showModal} setModal={setModal} />
+  } else
+    return (
+      <Subscribe
+        showModal={showModal}
+        open={open}
+        handleClick={handleClick}
+        setModal={setModal}
+      />
+    )
 }
 
 export default Showcase

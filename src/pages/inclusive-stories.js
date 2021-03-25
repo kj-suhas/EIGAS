@@ -11,6 +11,9 @@ import { faDove, faExpand } from "@fortawesome/free-solid-svg-icons"
 import bird from "../assets/bird.png"
 import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
+import HamburgerMenu from "react-hamburger-menu"
+import Group from "../assets/group.png"
+import Close from "../assets/close.png"
 
 // Subscribe
 import * as stylesHam from "../styles/hamburger.module.css"
@@ -86,6 +89,12 @@ const profile = ({ location, data }) => {
 
   const handleToggleSubscribe = value => {
     setShowSubscribe(value)
+  }
+
+  const [open, setOpen] = useState(false)
+  const profileSubHandle = () => {
+    setShowSubscribe(false)
+    setOpen(!open)
   }
 
   let allUsers = []
@@ -167,13 +176,50 @@ const profile = ({ location, data }) => {
               </h1>
             </li>
 
-            <li>
-              <img
-                className={stylesNavbar.hamburger}
-                onClick={() => handleToggleSubscribe(!showSubscribe)}
-                src={HeaderHamburger}
-              />
-            </li>
+            <div className={stylesNavbar.rubiks}>
+              {showSubscribe && (
+                <li>
+                  <img
+                    className={stylesNavbar.hamburger}
+                    onClick={() => {
+                      handleToggleSubscribe(!showSubscribe)
+                      setOpen(!open)
+                    }}
+                    src={Group}
+                  />
+                </li>
+              )}
+              {!showSubscribe && (
+                <li>
+                  <img
+                    className={stylesNavbar.hamburger}
+                    onClick={() => {
+                      handleToggleSubscribe(!showSubscribe)
+                      setOpen(!open)
+                    }}
+                    src={HeaderHamburger}
+                  />
+                </li>
+              )}
+            </div>
+            <div className={stylesNavbar.hamMenu}>
+              <li>
+                <HamburgerMenu
+                  isOpen={open}
+                  menuClicked={() => {
+                    profileSubHandle()
+                    handleToggleSubscribe(!showSubscribe)
+                  }}
+                  width={30}
+                  height={25}
+                  strokeWidth={1}
+                  rotate={0}
+                  color="black"
+                  borderRadius={0}
+                  animationDuration={0.5}
+                />
+              </li>
+            </div>
           </ul>
         </div>
       </section>
@@ -185,10 +231,14 @@ const profile = ({ location, data }) => {
         >
           <div className={`${stylesHam.profileCard} ${stylesHam.flex}`}>
             <span className={`${stylesHam.closeIcon} ${stylesHam.socialStyle}`}>
-              <FontAwesomeIcon
-                icon={faTimes}
-                size={"2x"}
-                onClick={() => handleToggleSubscribe(!showSubscribe)}
+              <img
+                className={stylesNavbar.closeSubscribe}
+                src={Close}
+                alt=""
+                onClick={() => {
+                  handleToggleSubscribe(!showSubscribe)
+                  setOpen(!open)
+                }}
               />
             </span>
             <div className={stylesHam.form}>

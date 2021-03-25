@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-const Subscribe = ({ showModal, setModal }) => {
+const Subscribe = ({ showModal, open, handleClick, setModal }) => {
   return (
     <section
       style={{
@@ -21,24 +21,39 @@ const Subscribe = ({ showModal, setModal }) => {
           <FontAwesomeIcon
             icon={faTimes}
             size={"2x"}
-            onClick={() => setModal(!showModal)}
+            onClick={() => {
+              setModal(!showModal)
+              handleClick(!open)
+            }}
           />
         </span>
         <div className={styles.form}>
           <span className={`${styles.iconClass} ${styles.socialStyle}`}>
-            <a title="Share on Instagram" href="https://www.instagram.com/indiainclusionsummit/" target="_blank">
+            <a
+              title="Share on Instagram"
+              href="https://www.instagram.com/indiainclusionsummit/"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faInstagram} size={"2x"} />
             </a>
-            <a title="Share on Facebook" href="https://www.facebook.com/IndiaInclusionSummit" target="_blank">
+            <a
+              title="Share on Facebook"
+              href="https://www.facebook.com/IndiaInclusionSummit"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faFacebook} size={"2x"} />
             </a>
-            <a title="Tweet about this on Twitter" href="https://twitter.com/IndiaInclusion" target="_blank">
+            <a
+              title="Tweet about this on Twitter"
+              href="https://twitter.com/IndiaInclusion"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faTwitter} size={"2x"} />
             </a>
           </span>
 
-          <div style={{ textAlign:'center' }}>
-            <span style={{ position:'relative', top:10}}>
+          <div style={{ textAlign: "center" }}>
+            <span style={{ position: "relative", top: 10 }}>
               We will notify you whenever there is a new story
             </span>
           </div>
@@ -48,34 +63,6 @@ const Subscribe = ({ showModal, setModal }) => {
             </div>
             <input type="submit" value="Subscribe" className={styles.btn} />
           </form>
-          {/* <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-              marginTop: "182px",
-            }}
-          >
-            <h2
-              style={{
-                color: "#51566f",
-                borderBottom: "2px solid black",
-                fontWeight: "bold",
-              }}
-            >
-              English
-            </h2>
-            <h2
-              style={{
-                color: "#51566f",
-
-                fontWeight: "bold",
-              }}
-            >
-              Hindi
-            </h2>
-          </div> */}
         </div>
       </div>
     </section>
