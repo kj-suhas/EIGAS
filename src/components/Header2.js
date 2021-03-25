@@ -6,6 +6,7 @@ import bird from "../assets/bird.png"
 import { Link } from "gatsby"
 import HeaderHamburger from "../assets/hamburger.png"
 import HamburgerMenu from "react-hamburger-menu"
+import Group from "../assets/group.png"
 
 const Header2 = ({ showModal, setModal, open, handleClick }) => {
   return (
@@ -39,18 +40,36 @@ const Header2 = ({ showModal, setModal, open, handleClick }) => {
             <div className={styles.headerDot}></div> something
           </h2>
         </div>
-        <ul>
-          <li>
-            <img
-              className={styles.hamburger}
-              src={HeaderHamburger}
-              onClick={() => {
-                setModal(!setModal)
-                handleClick(!open)
-              }}
-            />
-          </li>
-        </ul>
+        {!open && (
+          <ul>
+            <li>
+              <img
+                className={styles.hamburger}
+                src={HeaderHamburger}
+                onClick={() => {
+                  setModal(!setModal)
+                  handleClick(!open)
+                }}
+              />
+            </li>
+          </ul>
+        )}
+
+        {open && (
+          <ul>
+            <li>
+              <img
+                className={styles.hamburger}
+                src={Group}
+                onClick={() => {
+                  setModal(!setModal)
+                  handleClick(!open)
+                }}
+              />
+            </li>
+          </ul>
+        )}
+
         <div className={styles.hamMenu}>
           <ul>
             <li>
