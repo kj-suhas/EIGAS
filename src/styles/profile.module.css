@@ -111,6 +111,10 @@
   margin-bottom: 30px;
 }
 
+.moveMeDown {
+  /* background-color: red; */
+}
+
 @media (max-width: 800px) {
   .myMasonryGrid {
     margin-left: -15px; /* gutter size offset */

@@ -33,76 +33,53 @@ const Profile = ({ profileUser }) => {
           /> */}
         <Corousal userData={profileUser} />
 
-        <h3
-          style={{
-            fontWeight: "100",
-            fontSize: "25px",
-            fontFamily: "Times New Roman",
-            marginTop: "20px",
-          }}
-        >
-          {profileUser[0]?.Quote}
-        </h3>
-        <p
-          style={{
-            fontSize: "15px",
-            fontFamily: "Verdana",
-            marginTop: "10px",
-            fontWeight: "normal",
-            letterSpacing: "0.6px",
-          }}
-        >
-          {profileUser[0]?.Website_Content.split("\n").map((line, i) => (
-            <span key={i}>
-              {line}
-              <br />
-            </span>
-          ))}
-        </p>
-        {/* <p>
+        <div className={styles.moveMeDown}>
+          <h3
+            style={{
+              fontWeight: "100",
+              fontSize: "25px",
+              fontFamily: "Times New Roman",
+              marginTop: "20px",
+            }}
+          >
+            {profileUser[0]?.Quote}
+          </h3>
+          <p
+            style={{
+              fontSize: "15px",
+              fontFamily: "Verdana",
+              marginTop: "10px",
+              fontWeight: "normal",
+              letterSpacing: "0.6px",
+            }}
+          >
+            {profileUser[0]?.Website_Content.split("\n").map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </p>
+          {/* <p>
           <p>
             {profileUser[0]?.Name} can be reached on 99999 99999; his email id
             is {profileUser[0]?.email}
           </p>
         </p> */}
 
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          Photos:{" "}
-          <h4
-            style={{
-              marginLeft: "9px",
-            }}
-          >
-            Vicky Roy{" "}
-            <Link to="https://www.vickyroy.in/">
-              <FontAwesomeIcon
-                style={{
-                  marginLeft: "10px",
-                }}
-                icon={faExternalLinkAlt}
-                size={"1x"}
-              />
-            </Link>
-          </h4>
-        </div>
-        {profileUser[0]?.Video &&
           <div
             style={{
               display: "flex",
             }}
           >
-            Video:{" "}
+            Photos:{" "}
             <h4
               style={{
                 marginLeft: "9px",
               }}
             >
-              Chandan Gomes{" "}
-              <Link to="http://www.chandangomes.com/">
+              Vicky Roy{" "}
+              <Link to="https://www.vickyroy.in/">
                 <FontAwesomeIcon
                   style={{
                     marginLeft: "10px",
@@ -113,7 +90,32 @@ const Profile = ({ profileUser }) => {
               </Link>
             </h4>
           </div>
-        }
+          {profileUser[0]?.Video && (
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              Video:{" "}
+              <h4
+                style={{
+                  marginLeft: "9px",
+                }}
+              >
+                Chandan Gomes{" "}
+                <Link to="http://www.chandangomes.com/">
+                  <FontAwesomeIcon
+                    style={{
+                      marginLeft: "10px",
+                    }}
+                    icon={faExternalLinkAlt}
+                    size={"1x"}
+                  />
+                </Link>
+              </h4>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
